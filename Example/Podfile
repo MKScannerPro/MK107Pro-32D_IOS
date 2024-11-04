@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'MKGatewaySevenProTTD_Example' do
+  pod 'MKGatewaySevenProTTD', :path => '../'
+
+  target 'MKGatewaySevenProTTD_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
