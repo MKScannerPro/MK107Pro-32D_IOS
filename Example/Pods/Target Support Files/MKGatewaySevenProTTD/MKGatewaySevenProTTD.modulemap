@@ -1,0 +1,6 @@
+framework module MKGatewaySevenProTTD {
+  umbrella header "MKGatewaySevenProTTD-umbrella.h"
+
+  export *
+  module * { export * }
+}
