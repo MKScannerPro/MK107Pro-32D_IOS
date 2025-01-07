@@ -1197,6 +1197,7 @@
 }
 
 + (void)cu_configDuplicateDataFilter:(mk_cu_duplicateDataFilter)filter
+                            strategy:(mk_cu_duplicateDataFilterStrategy)strategy
                               period:(long long)period
                           macAddress:(NSString *)macAddress
                                topic:(NSString *)topic
@@ -1218,6 +1219,7 @@
         },
         @"data":@{
             @"rule":@(filter),
+            @"mode":@(strategy),
             @"timeout":@(period),
         }
     };
