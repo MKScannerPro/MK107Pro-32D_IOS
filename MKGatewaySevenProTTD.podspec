@@ -148,6 +148,12 @@ TODO: Add long description of the pod here.
     
   end
   
+  s.subspec 'LoginManager' do |ss|
+    ss.source_files = 'MKGatewaySevenProTTD/Classes/LoginManager/**'
+  
+    ss.dependency 'MKIotCloudManager'
+  end
+  
   s.subspec 'Functions' do |ss|
     
     ss.subspec 'AddDeviceModules' do |sss|
@@ -814,11 +820,24 @@ TODO: Add long description of the pod here.
         
     end
     
+    ss.subspec 'SyncDevicePage' do |sss|
+        sss.subspec 'Controller' do |ssss|
+          ssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/SyncDevicePage/Controller/**'
+          
+          ssss.dependency 'MKGatewaySevenProTTD/Functions/SyncDevicePage/View'
+        end
+        
+        sss.subspec 'View' do |ssss|
+          ssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/SyncDevicePage/View/**'
+        end
+    end
+    
     ss.dependency 'MKGatewaySevenProTTD/SDK'
     ss.dependency 'MKGatewaySevenProTTD/Expand'
     ss.dependency 'MKGatewaySevenProTTD/CTMediator'
     ss.dependency 'MKGatewaySevenProTTD/DeviceModel'
     ss.dependency 'MKGatewaySevenProTTD/CTMediator'
+    ss.dependency 'MKGatewaySevenProTTD/LoginManager'
   
     ss.dependency 'MKBaseModuleLibrary'
     ss.dependency 'MKCustomUIModule'

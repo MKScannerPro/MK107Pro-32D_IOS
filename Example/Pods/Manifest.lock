@@ -425,6 +425,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel (= 0.1.0)
     - MKGatewaySevenProTTD/Expand (= 0.1.0)
     - MKGatewaySevenProTTD/Functions (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager (= 0.1.0)
     - MKGatewaySevenProTTD/SDK (= 0.1.0)
     - MKGatewaySevenProTTD/Target (= 0.1.0)
   - MKGatewaySevenProTTD/CTMediator (0.1.0):
@@ -493,6 +494,8 @@ PODS:
     - MKGatewaySevenProTTD/Functions/ScanPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ServerForApp (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/SyncDevicePage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules (0.1.0):
@@ -503,6 +506,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages (0.1.0):
@@ -520,6 +524,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconPage (0.1.0):
@@ -531,6 +536,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconPage/Model (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconPage/Controller (0.1.0):
@@ -541,6 +547,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconPage/Model
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconPage/Model (0.1.0):
@@ -550,6 +557,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoPage (0.1.0):
@@ -561,6 +569,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoPage/Model (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoPage/Controller (0.1.0):
@@ -571,6 +580,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoPage/Model
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoPage/Model (0.1.0):
@@ -580,6 +590,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleScannerFilterPage (0.1.0):
@@ -591,6 +602,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleScannerFilterPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleScannerFilterPage/Model (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleScannerFilterPage/Controller (0.1.0):
@@ -601,6 +613,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleScannerFilterPage/Model
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleScannerFilterPage/Model (0.1.0):
@@ -610,6 +623,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage (0.1.0):
@@ -622,6 +636,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/Model (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/View (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/Controller (0.1.0):
@@ -633,6 +648,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/Model
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/View
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/Model (0.1.0):
@@ -642,6 +658,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/View (0.1.0):
@@ -651,6 +668,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ConnectSuccessPage (0.1.0):
@@ -661,6 +679,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ConnectSuccessPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ConnectSuccessPage/Controller (0.1.0):
@@ -670,6 +689,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/DeviceParamsListPage (0.1.0):
@@ -680,6 +700,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/DeviceParamsListPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/DeviceParamsListPage/Controller (0.1.0):
@@ -696,6 +717,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage (0.1.0):
@@ -707,6 +729,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage/Model (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage/Controller (0.1.0):
@@ -717,6 +740,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage/Model
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage/Model (0.1.0):
@@ -726,6 +750,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice (0.1.0):
@@ -738,6 +763,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice/Model (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice/View (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice/Controller (0.1.0):
@@ -749,6 +775,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice/Model
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice/View
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice/Model (0.1.0):
@@ -758,6 +785,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice/View (0.1.0):
@@ -767,6 +795,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel (0.1.0):
@@ -775,6 +804,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/DeviceDataPage (0.1.0):
@@ -785,6 +815,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/DeviceDataPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/DeviceDataPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/DeviceDataPage/Controller (0.1.0):
@@ -797,6 +828,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage
     - MKGatewaySevenProTTD/Functions/ManageBleModules
     - MKGatewaySevenProTTD/Functions/SettingPages
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/DeviceDataPage/View (0.1.0):
@@ -805,6 +837,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/DeviceListPage (0.1.0):
@@ -816,6 +849,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/DeviceListPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/DeviceListPage/Model (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/DeviceListPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/DeviceListPage/Controller (0.1.0):
@@ -829,6 +863,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/DeviceListPage/View
     - MKGatewaySevenProTTD/Functions/ScanPage
     - MKGatewaySevenProTTD/Functions/ServerForApp
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/DeviceListPage/Model (0.1.0):
@@ -837,6 +872,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/DeviceListPage/View (0.1.0):
@@ -846,6 +882,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/DeviceListPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages (0.1.0):
@@ -869,6 +906,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByURLPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/DuplicateDataFilterPage (0.1.0):
@@ -879,6 +917,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/DuplicateDataFilterPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/DuplicateDataFilterPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/DuplicateDataFilterPage/Controller (0.1.0):
@@ -888,6 +927,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/DuplicateDataFilterPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/DuplicateDataFilterPage/Model (0.1.0):
@@ -896,6 +936,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByAdvNamePage (0.1.0):
@@ -906,6 +947,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByAdvNamePage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByAdvNamePage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByAdvNamePage/Controller (0.1.0):
@@ -915,6 +957,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByAdvNamePage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByAdvNamePage/Model (0.1.0):
@@ -923,6 +966,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage (0.1.0):
@@ -934,6 +978,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage/Header (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage/Controller (0.1.0):
@@ -944,6 +989,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage/Header
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage/Header (0.1.0):
@@ -952,6 +998,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage/Model (0.1.0):
@@ -961,6 +1008,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage/Header
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByButtonPage (0.1.0):
@@ -971,6 +1019,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByButtonPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByButtonPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByButtonPage/Controller (0.1.0):
@@ -980,6 +1029,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByButtonPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByButtonPage/Model (0.1.0):
@@ -988,6 +1038,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByMacPage (0.1.0):
@@ -998,6 +1049,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByMacPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByMacPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByMacPage/Controller (0.1.0):
@@ -1007,6 +1059,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByMacPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByMacPage/Model (0.1.0):
@@ -1015,6 +1068,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage (0.1.0):
@@ -1025,6 +1079,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage/Controller (0.1.0):
@@ -1034,6 +1089,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage/Model (0.1.0):
@@ -1042,6 +1098,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage (0.1.0):
@@ -1052,6 +1109,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage/Controller (0.1.0):
@@ -1061,6 +1119,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage/Model (0.1.0):
@@ -1069,6 +1128,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataPage (0.1.0):
@@ -1079,6 +1139,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataPage/Controller (0.1.0):
@@ -1097,6 +1158,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTofPage
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByUIDPage
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByURLPage
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataPage/Model (0.1.0):
@@ -1105,6 +1167,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTag (0.1.0):
@@ -1115,6 +1178,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTag/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTag/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTag/Controller (0.1.0):
@@ -1124,6 +1188,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTag/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTag/Model (0.1.0):
@@ -1132,6 +1197,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTLMPage (0.1.0):
@@ -1142,6 +1208,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTLMPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTLMPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTLMPage/Controller (0.1.0):
@@ -1151,6 +1218,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTLMPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTLMPage/Model (0.1.0):
@@ -1159,6 +1227,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTofPage (0.1.0):
@@ -1169,6 +1238,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTofPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTofPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTofPage/Controller (0.1.0):
@@ -1178,6 +1248,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTofPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTofPage/Model (0.1.0):
@@ -1186,6 +1257,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByUIDPage (0.1.0):
@@ -1196,6 +1268,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByUIDPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByUIDPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByUIDPage/Controller (0.1.0):
@@ -1205,6 +1278,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByUIDPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByUIDPage/Model (0.1.0):
@@ -1213,6 +1287,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByURLPage (0.1.0):
@@ -1223,6 +1298,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByURLPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByURLPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByURLPage/Controller (0.1.0):
@@ -1232,6 +1308,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByURLPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByURLPage/Model (0.1.0):
@@ -1240,6 +1317,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage (0.1.0):
@@ -1250,6 +1328,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage/Controller (0.1.0):
@@ -1259,6 +1338,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage/Model (0.1.0):
@@ -1267,6 +1347,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage (0.1.0):
@@ -1278,6 +1359,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/Model (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/Controller (0.1.0):
@@ -1293,6 +1375,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/Model
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/View
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/Model (0.1.0):
@@ -1301,6 +1384,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/View (0.1.0):
@@ -1309,6 +1393,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules (0.1.0):
@@ -1321,6 +1406,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ManageBleModules/ManageBleDevicesPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ManageBleModules/NormalConnectedPage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage (0.1.0):
@@ -1331,6 +1417,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage/Controller (0.1.0):
@@ -1340,6 +1427,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage/Model (0.1.0):
@@ -1348,6 +1436,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage (0.1.0):
@@ -1358,6 +1447,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage/Controller (0.1.0):
@@ -1368,6 +1458,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage
     - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage/View
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage/View (0.1.0):
@@ -1376,6 +1467,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/ManageBleDevicesPage (0.1.0):
@@ -1386,6 +1478,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/ManageBleModules/ManageBleDevicesPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ManageBleModules/ManageBleDevicesPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/ManageBleDevicesPage/Controller (0.1.0):
@@ -1397,6 +1490,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage
     - MKGatewaySevenProTTD/Functions/ManageBleModules/ManageBleDevicesPage/View
     - MKGatewaySevenProTTD/Functions/ManageBleModules/NormalConnectedPage
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/ManageBleDevicesPage/View (0.1.0):
@@ -1405,6 +1499,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/NormalConnectedPage (0.1.0):
@@ -1415,6 +1510,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/ManageBleModules/NormalConnectedPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ManageBleModules/NormalConnectedPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/NormalConnectedPage/Controller (0.1.0):
@@ -1424,6 +1520,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/ManageBleModules/NormalConnectedPage/View
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/NormalConnectedPage/View (0.1.0):
@@ -1432,6 +1529,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ScanPage (0.1.0):
@@ -1443,6 +1541,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/ScanPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ScanPage/Model (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ScanPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ScanPage/Controller (0.1.0):
@@ -1454,6 +1553,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/AddDeviceModules
     - MKGatewaySevenProTTD/Functions/ScanPage/Model
     - MKGatewaySevenProTTD/Functions/ScanPage/View
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ScanPage/Model (0.1.0):
@@ -1462,6 +1562,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ScanPage/View (0.1.0):
@@ -1471,6 +1572,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/ScanPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ServerForApp (0.1.0):
@@ -1482,6 +1584,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/ServerForApp/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ServerForApp/Model (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ServerForApp/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ServerForApp/Controller (0.1.0):
@@ -1492,6 +1595,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/ServerForApp/Model
     - MKGatewaySevenProTTD/Functions/ServerForApp/View
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ServerForApp/Model (0.1.0):
@@ -1500,6 +1604,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ServerForApp/View (0.1.0):
@@ -1508,6 +1613,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages (0.1.0):
@@ -1521,6 +1627,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/OTAPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/SettingPage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/DeviceInfoPage (0.1.0):
@@ -1531,6 +1638,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/DeviceInfoPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/DeviceInfoPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/DeviceInfoPage/Controller (0.1.0):
@@ -1540,6 +1648,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/DeviceInfoPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/DeviceInfoPage/Model (0.1.0):
@@ -1548,6 +1657,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages (0.1.0):
@@ -1559,6 +1669,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttParamsListPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttServerPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttWifiSettingsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttParamsListPage (0.1.0):
@@ -1569,6 +1680,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttParamsListPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttParamsListPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttParamsListPage/Controller (0.1.0):
@@ -1580,6 +1692,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttParamsListPage/Model
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttServerPage
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttWifiSettingsPage
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttParamsListPage/Model (0.1.0):
@@ -1588,6 +1701,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttServerPage (0.1.0):
@@ -1599,6 +1713,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttServerPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttServerPage/Model (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttServerPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttServerPage/Controller (0.1.0):
@@ -1609,6 +1724,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttServerPage/Model
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttServerPage/View
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttServerPage/Model (0.1.0):
@@ -1617,6 +1733,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttServerPage/View (0.1.0):
@@ -1625,6 +1742,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttWifiSettingsPage (0.1.0):
@@ -1635,6 +1753,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttWifiSettingsPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttWifiSettingsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttWifiSettingsPage/Controller (0.1.0):
@@ -1644,6 +1763,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttWifiSettingsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/ModifyNetworkPages/MqttWifiSettingsPage/Model (0.1.0):
@@ -1652,6 +1772,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings (0.1.0):
@@ -1669,6 +1790,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ReconnectTimePage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ResetByButtonPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/SystemTimePage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconPage (0.1.0):
@@ -1679,6 +1801,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconPage/Controller (0.1.0):
@@ -1688,6 +1811,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconPage/Model (0.1.0):
@@ -1696,6 +1820,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/CommunicatePage (0.1.0):
@@ -1706,6 +1831,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/CommunicatePage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/CommunicatePage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/CommunicatePage/Controller (0.1.0):
@@ -1715,6 +1841,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/CommunicatePage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/CommunicatePage/Model (0.1.0):
@@ -1723,6 +1850,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/DataReportPage (0.1.0):
@@ -1733,6 +1861,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/DataReportPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/DataReportPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/DataReportPage/Controller (0.1.0):
@@ -1742,6 +1871,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/DataReportPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/DataReportPage/Model (0.1.0):
@@ -1750,6 +1880,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/IndicatorSettingsPage (0.1.0):
@@ -1760,6 +1891,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/IndicatorSettingsPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/IndicatorSettingsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/IndicatorSettingsPage/Controller (0.1.0):
@@ -1769,6 +1901,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/IndicatorSettingsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/IndicatorSettingsPage/Model (0.1.0):
@@ -1777,6 +1910,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NetworkStatusPage (0.1.0):
@@ -1787,6 +1921,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NetworkStatusPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NetworkStatusPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NetworkStatusPage/Controller (0.1.0):
@@ -1796,6 +1931,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NetworkStatusPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NetworkStatusPage/Model (0.1.0):
@@ -1804,6 +1940,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NTPServerPage (0.1.0):
@@ -1814,6 +1951,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NTPServerPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NTPServerPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NTPServerPage/Controller (0.1.0):
@@ -1823,6 +1961,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NTPServerPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NTPServerPage/Model (0.1.0):
@@ -1831,6 +1970,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ReconnectTimePage (0.1.0):
@@ -1841,6 +1981,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ReconnectTimePage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ReconnectTimePage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ReconnectTimePage/Controller (0.1.0):
@@ -1850,6 +1991,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ReconnectTimePage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ReconnectTimePage/Model (0.1.0):
@@ -1858,6 +2000,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ResetByButtonPage (0.1.0):
@@ -1868,6 +2011,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ResetByButtonPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ResetByButtonPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ResetByButtonPage/Controller (0.1.0):
@@ -1877,6 +2021,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ResetByButtonPage/View
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/ResetByButtonPage/View (0.1.0):
@@ -1885,6 +2030,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/SystemTimePage (0.1.0):
@@ -1895,6 +2041,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/SystemTimePage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/SystemTimePage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/SystemTimePage/Controller (0.1.0):
@@ -1905,6 +2052,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/NTPServerPage
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/SystemTimePage/View
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/SystemTimePage/View (0.1.0):
@@ -1913,6 +2061,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/OTAPage (0.1.0):
@@ -1923,6 +2072,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/OTAPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/OTAPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/OTAPage/Controller (0.1.0):
@@ -1932,6 +2082,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/OTAPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/OTAPage/Model (0.1.0):
@@ -1940,6 +2091,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/SettingPage (0.1.0):
@@ -1950,6 +2102,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/SettingPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/SettingPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/SettingPage/Controller (0.1.0):
@@ -1963,6 +2116,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings
     - MKGatewaySevenProTTD/Functions/SettingPages/OTAPage
     - MKGatewaySevenProTTD/Functions/SettingPages/SettingPage/Model
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/SettingPage/Model (0.1.0):
@@ -1971,8 +2125,41 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/SyncDevicePage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/SyncDevicePage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/SyncDevicePage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/SyncDevicePage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/SyncDevicePage/View
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/SyncDevicePage/View (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/LoginManager (0.1.0):
+    - MKIotCloudManager
   - MKGatewaySevenProTTD/SDK (0.1.0):
     - MKGatewaySevenProTTD/SDK/BLE (= 0.1.0)
     - MKGatewaySevenProTTD/SDK/MQTT (= 0.1.0)
@@ -1990,6 +2177,30 @@ PODS:
   - MKGatewaySevenProTTD/Target (0.1.0):
     - MKBaseModuleLibrary
     - MKGatewaySevenProTTD/Functions
+  - MKIotCloudManager (0.0.12):
+    - MKIotCloudManager/SDK (= 0.0.12)
+    - MKIotCloudManager/View (= 0.0.12)
+  - MKIotCloudManager/SDK (0.0.12):
+    - MKIotCloudManager/SDK/Config (= 0.0.12)
+    - MKIotCloudManager/SDK/MKNetwork (= 0.0.12)
+    - MKIotCloudManager/SDK/NetworkService (= 0.0.12)
+  - MKIotCloudManager/SDK/Config (0.0.12)
+  - MKIotCloudManager/SDK/MKNetwork (0.0.12):
+    - MKBaseModuleLibrary
+    - MKIotCloudManager/SDK/Config
+  - MKIotCloudManager/SDK/NetworkService (0.0.12):
+    - MKBaseModuleLibrary
+    - MKIotCloudManager/SDK/Config
+    - MKIotCloudManager/SDK/MKNetwork
+  - MKIotCloudManager/View (0.0.12):
+    - MKIotCloudManager/View/AccountLoginAlertView (= 0.0.12)
+    - MKIotCloudManager/View/ExitAccountAlertView (= 0.0.12)
+  - MKIotCloudManager/View/AccountLoginAlertView (0.0.12):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+  - MKIotCloudManager/View/ExitAccountAlertView (0.0.12):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
   - MLInputDodger (1.5.2)
   - SSZipArchive (2.4.3)
   - Toast (4.1.1)
@@ -1999,7 +2210,7 @@ DEPENDENCIES:
   - MKGatewaySevenProTTD (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - CircleProgressBar
     - CTMediator
     - FMDB
@@ -2010,6 +2221,7 @@ SPEC REPOS:
     - MKBaseModuleLibrary
     - MKBaseMQTTModule
     - MKCustomUIModule
+    - MKIotCloudManager
     - MLInputDodger
     - SSZipArchive
     - Toast
@@ -2030,12 +2242,13 @@ SPEC CHECKSUMS:
   MKBaseModuleLibrary: 2b79bcae588c755588413fbb643b510253271b23
   MKBaseMQTTModule: 6a934ccf507e0eb807ef8f8a74dacd5d60216834
   MKCustomUIModule: 8426eba1d3178b06d92741d31da32502920fb8fa
-  MKGatewaySevenProTTD: 62d299ceb94dee970db62e6b45bdf43ee4501022
+  MKGatewaySevenProTTD: 453157d5b669f1c5e549d16e7f67678a3278fe32
+  MKIotCloudManager: 241bd4bb7fae48e6b031c69a40c26637aabe67be
   MLInputDodger: 79a0e420a80d0d3bba122bf2639603cc76609ba8
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
   WRNavigationBar: 10bfdf96addf14d640d07c2ef08a029c18d8af10
 
-PODFILE CHECKSUM: 78868b2d7673ce6e71a0d3901c096364adb06b34
+PODFILE CHECKSUM: 68255a8b2693c675dc69bada79dc1846af8b1421
 
-COCOAPODS: 1.16.1
+COCOAPODS: 1.16.2
