@@ -243,6 +243,9 @@
     }else if (msgID == 1062) {
         //配置MK-TOF过滤
         operationID = mk_cu_server_taskConfigFilterByTofOperation;
+    }else if (msgID == 1064) {
+        //配置过滤NanoBeacon信息
+        operationID = mk_cu_server_taskConfigFilterByNanoBeaconOperation;
     }else if (msgID == 1200) {
         //网关断开指定mac地址的蓝牙设备
         operationID = mk_cu_server_taskDisconnectNormalBleDeviceWithMacOperation;
@@ -366,6 +369,9 @@
     }else if (msgID == 2062) {
         //读取MK-TOF过滤
         operationID = mk_cu_server_taskReadFilterByTofOperation;
+    }else if (msgID == 2064) {
+        //读取NanoBeacon过滤内容
+        operationID = mk_cu_server_taskReadFilterByNanoBeaconOperation;
     }else if (msgID == 2201) {
         //读取网关蓝牙连接的状态
         operationID = mk_cu_server_taskReadGatewayBleConnectStatusOperation;

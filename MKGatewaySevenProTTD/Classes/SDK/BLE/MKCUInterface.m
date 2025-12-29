@@ -118,6 +118,26 @@
                          failureBlock:failedBlock];
 }
 
++ (void)cu_readWifiFirmwareWithSucBlock:(void (^)(id returnData))sucBlock
+                            failedBlock:(void (^)(NSError *error))failedBlock {
+    NSString *commandString = @"ed001300";
+    [centralManager addTaskWithTaskID:mk_cu_taskReadWifiFirmwareOperation
+                       characteristic:peripheral.cu_custom
+                          commandData:commandString
+                         successBlock:sucBlock
+                         failureBlock:failedBlock];
+}
+
++ (void)cu_readBLEFirmwareWithSucBlock:(void (^)(id returnData))sucBlock
+                           failedBlock:(void (^)(NSError *error))failedBlock {
+    NSString *commandString = @"ed001600";
+    [centralManager addTaskWithTaskID:mk_cu_taskReadBLEFirmwareOperation
+                       characteristic:peripheral.cu_custom
+                          commandData:commandString
+                         successBlock:sucBlock
+                         failureBlock:failedBlock];
+}
+
 #pragma mark *********************MQTT Params************************
 
 + (void)cu_readServerHostWithSucBlock:(void (^)(id returnData))sucBlock
@@ -545,6 +565,16 @@
                          failureBlock:failedBlock];
 }
 
++ (void)cu_readConnectableWithSucBlock:(void (^)(id returnData))sucBlock
+                           failedBlock:(void (^)(NSError *error))failedBlock {
+    NSString *commandString = @"ed007700";
+    [centralManager addTaskWithTaskID:mk_cu_taskReadConnectableOperation
+                       characteristic:peripheral.cu_custom
+                          commandData:commandString
+                         successBlock:sucBlock
+                         failureBlock:failedBlock];
+}
+
 #pragma mark *********************Metering Params************************
 
 + (void)cu_readMeteringSwitchWithSucBlock:(void (^)(id returnData))sucBlock
@@ -581,6 +611,16 @@
                                                failedBlock:(void (^)(NSError *error))failedBlock {
     NSString *commandString = @"ed008300";
     [centralManager addTaskWithTaskID:mk_cu_taskReadLoadDetectionNotificationStatusOperation
+                       characteristic:peripheral.cu_custom
+                          commandData:commandString
+                         successBlock:sucBlock
+                         failureBlock:failedBlock];
+}
+
++ (void)cu_readDeviceModeWithSucBlock:(void (^)(id returnData))sucBlock
+                          failedBlock:(void (^)(NSError *error))failedBlock {
+    NSString *commandString = @"ed00c000";
+    [centralManager addTaskWithTaskID:mk_cu_taskReadDeviceModeOperation
                        characteristic:peripheral.cu_custom
                           commandData:commandString
                          successBlock:sucBlock

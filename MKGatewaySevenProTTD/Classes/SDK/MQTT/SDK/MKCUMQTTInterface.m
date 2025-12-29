@@ -1295,6 +1295,70 @@
                                failedBlock:failedBlock];
 }
 
++ (void)cu_readFilterByNanoBeaconWithMacAddress:(NSString *)macAddress
+                                          topic:(NSString *)topic
+                                       sucBlock:(void (^)(id returnData))sucBlock
+                                    failedBlock:(void (^)(NSError *error))failedBlock {
+    NSString *checkMsg = [self checkMacAddress:macAddress topic:topic];
+    if (ValidStr(checkMsg)) {
+        [self operationFailedBlockWithMsg:checkMsg failedBlock:failedBlock];
+        return;
+    }
+    NSDictionary *data = @{
+        @"msg_id":@(2064),
+        @"device_info":@{
+                @"mac":macAddress
+        },
+    };
+    [[MKCUMQTTDataManager shared] sendData:data
+                                     topic:topic
+                                macAddress:macAddress
+                                    taskID:mk_cu_server_taskReadFilterByNanoBeaconOperation
+                                  sucBlock:sucBlock
+                               failedBlock:failedBlock];
+}
+
++ (void)cu_configFilterByNanoBeacon:(BOOL)isOn
+                            advType:(mk_cu_filterByNanoBeaconAdvType)advType
+                  manufactureIDList:(NSArray <NSString *>*)manufactureIDList
+                         macAddress:(NSString *)macAddress
+                              topic:(NSString *)topic
+                           sucBlock:(void (^)(id returnData))sucBlock
+                        failedBlock:(void (^)(NSError *error))failedBlock {
+    NSString *checkMsg = [self checkMacAddress:macAddress topic:topic];
+    if (ValidStr(checkMsg)) {
+        [self operationFailedBlockWithMsg:checkMsg failedBlock:failedBlock];
+        return;
+    }
+    if (manufactureIDList.count > 10 || !manufactureIDList || ![manufactureIDList isKindOfClass:NSArray.class]) {
+        [self operationFailedBlockWithMsg:@"Params Error" failedBlock:failedBlock];
+        return;
+    }
+    for (NSString * code in manufactureIDList) {
+        if (code.length != 4 || ![code regularExpressions:isHexadecimal]) {
+            [self operationFailedBlockWithMsg:@"Params Error" failedBlock:failedBlock];
+            return;
+        }
+    }
+    NSDictionary *data = @{
+        @"msg_id":@(1064),
+        @"device_info":@{
+                @"mac":macAddress
+        },
+        @"data":@{
+            @"switch_value":(isOn ? @(1) : @(0)),
+            @"adv_type":@(advType),
+            @"mf_id":manufactureIDList
+        }
+    };
+    [[MKCUMQTTDataManager shared] sendData:data
+                                     topic:topic
+                                macAddress:macAddress
+                                    taskID:mk_cu_server_taskConfigFilterByNanoBeaconOperation
+                                  sucBlock:sucBlock
+                               failedBlock:failedBlock];
+}
+
 + (void)cu_connectBXPButtonWithPassword:(NSString *)password
                                  bleMac:(NSString *)bleMacAddress
                              macAddress:(NSString *)macAddress

@@ -103,6 +103,28 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)cu_readTimeZoneWithSucBlock:(void (^)(id returnData))sucBlock
                         failedBlock:(void (^)(NSError *error))failedBlock;
 
+/// Read the firmware version of the wifi.
+/*
+ @{
+ @"firmware":@"V1.0.2"
+ }
+ */
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)cu_readWifiFirmwareWithSucBlock:(void (^)(id returnData))sucBlock
+                            failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Read the firmware version of the BLE.
+/*
+ @{
+ @"firmware":@"V1.0.2"
+ }
+ */
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)cu_readBLEFirmwareWithSucBlock:(void (^)(id returnData))sucBlock
+                           failedBlock:(void (^)(NSError *error))failedBlock;
+
 #pragma mark *********************MQTT Params************************
 
 /// Read the domain name of the MQTT server.
@@ -561,6 +583,17 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)cu_readBeaconRssiWithSucBlock:(void (^)(id returnData))sucBlock
                           failedBlock:(void (^)(NSError *error))failedBlock;
 
+/// Connectable.
+/*
+ @{
+    @"connectable":@(YES),
+ }
+ */
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)cu_readConnectableWithSucBlock:(void (^)(id returnData))sucBlock
+                           failedBlock:(void (^)(NSError *error))failedBlock;
+
 #pragma mark *********************Metering Params************************
 
 /// Switch of the metering.
@@ -606,6 +639,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param failedBlock Failure callback
 + (void)cu_readLoadDetectionNotificationStatusWithSucBlock:(void (^)(id returnData))sucBlock
                                                failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Device Mode.
+/*
+ @{
+    @"mode":@"0",   //@"0":Configuration Mode   @"1":Connection Server Mode
+ }
+ */
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)cu_readDeviceModeWithSucBlock:(void (^)(id returnData))sucBlock
+                          failedBlock:(void (^)(NSError *error))failedBlock;
 
 @end
 

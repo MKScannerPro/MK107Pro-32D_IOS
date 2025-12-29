@@ -1,12 +1,12 @@
 //
-//  MKCUButtonDFUController.m
-//  MKGatewaySevenProTTD_Example
+//  MKCSButtonDFUController.m
+//  MKGatewayMiniTwo_Example
 //
-//  Created by aa on 2024/11/4.
+//  Created by aa on 2024/11/01.
 //  Copyright © 2024 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCUButtonDFUController.h"
+#import "MKCSButtonDFUController.h"
 
 #import "Masonry.h"
 
@@ -21,13 +21,13 @@
 
 #import "MKHudManager.h"
 
-#import "MKCUDeviceModeManager.h"
+#import "MKCSDeviceModeManager.h"
 
-#import "MKCUMQTTDataManager.h"
+#import "MKCSMQTTDataManager.h"
 
-#import "MKCUButtonDFUModel.h"
+#import "MKCSButtonDFUModel.h"
 
-@interface MKCUButtonDFUController ()<UITableViewDelegate,
+@interface MKCSButtonDFUController ()<UITableViewDelegate,
 UITableViewDataSource,
 MKTextFieldCellDelegate>
 
@@ -35,7 +35,7 @@ MKTextFieldCellDelegate>
 
 @property (nonatomic, strong)NSMutableArray *dataList;
 
-@property (nonatomic, strong)MKCUButtonDFUModel *dataModel;
+@property (nonatomic, strong)MKCSButtonDFUModel *dataModel;
 
 @property (nonatomic, strong)UILabel *progressLabel;
 
@@ -43,10 +43,10 @@ MKTextFieldCellDelegate>
 
 @end
 
-@implementation MKCUButtonDFUController
+@implementation MKCSButtonDFUController
 
 - (void)dealloc {
-    NSLog(@"MKCUButtonDFUController销毁");
+    NSLog(@"MKCSButtonDFUController销毁");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -113,20 +113,20 @@ MKTextFieldCellDelegate>
 #pragma mark - notes
 - (void)receiveDisconnect:(NSNotification *)note {
     NSDictionary *user = note.userInfo;
-    if (!ValidDict(user) || !ValidStr(user[@"device_info"][@"mac"]) || ![[MKCUDeviceModeManager shared].macAddress isEqualToString:user[@"device_info"][@"mac"]]) {
+    if (!ValidDict(user) || !ValidStr(user[@"device_info"][@"mac"]) || ![[MKCSDeviceModeManager shared].macAddress isEqualToString:user[@"device_info"][@"mac"]]) {
         return;
     }
     NSDictionary *dataDic = user[@"data"];
     if (![dataDic[@"mac"] isEqualToString:self.bleMacAddress]) {
         return;
     }
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"mk_cu_needDismissAlert" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"mk_cs_needDismissAlert" object:nil];
     [self gotoLastPage];
 }
 
 - (void)receiveDfuProgress:(NSNotification *)note {
     NSDictionary *user = note.userInfo;
-    if (!ValidDict(user) || !ValidStr(user[@"device_info"][@"mac"]) || ![[MKCUDeviceModeManager shared].macAddress isEqualToString:user[@"device_info"][@"mac"]]) {
+    if (!ValidDict(user) || !ValidStr(user[@"device_info"][@"mac"]) || ![[MKCSDeviceModeManager shared].macAddress isEqualToString:user[@"device_info"][@"mac"]]) {
         return;
     }
     if (!ValidStr(user[@"data"][@"mac"]) || ![self.bleMacAddress isEqualToString:user[@"data"][@"mac"]]) {
@@ -142,7 +142,7 @@ MKTextFieldCellDelegate>
 
 - (void)receiveDfuResult:(NSNotification *)note {
     NSDictionary *user = note.userInfo;
-    if (!ValidDict(user) || !ValidStr(user[@"device_info"][@"mac"]) || ![[MKCUDeviceModeManager shared].macAddress isEqualToString:user[@"device_info"][@"mac"]]) {
+    if (!ValidDict(user) || !ValidStr(user[@"device_info"][@"mac"]) || ![[MKCSDeviceModeManager shared].macAddress isEqualToString:user[@"device_info"][@"mac"]]) {
         return;
     }
     if (!ValidStr(user[@"data"][@"mac"]) || ![self.bleMacAddress isEqualToString:user[@"data"][@"mac"]]) {
@@ -189,29 +189,29 @@ MKTextFieldCellDelegate>
 - (void)addNotes {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveDfuProgress:)
-                                                 name:MKCUReceiveBxpButtonDfuProgressNotification
+                                                 name:MKCSReceiveBxpButtonDfuProgressNotification
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveDfuResult:)
-                                                 name:MKCUReceiveBxpButtonDfuResultNotification
+                                                 name:MKCSReceiveBxpButtonDfuResultNotification
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveDisconnect:)
-                                                 name:MKCUReceiveGatewayDisconnectBXPButtonNotification
+                                                 name:MKCSReceiveGatewayDisconnectBXPButtonNotification
                                                object:nil];
 }
 
 - (void)gotoLastPage {
     //返回上一级页面
     for (UIViewController *vc in self.navigationController.viewControllers) {
-        if ([vc isKindOfClass:NSClassFromString(@"MKCUManageBleDevicesController")]) {
+        if ([vc isKindOfClass:NSClassFromString(@"MKCSManageBleDevicesController")]) {
             //如果是从Manage BLE devices页面进来的
-            [self popToViewControllerWithClassName:@"MKCUManageBleDevicesController"];
+            [self popToViewControllerWithClassName:@"MKCSManageBleDevicesController"];
             break;
         }
-        if ([vc isKindOfClass:NSClassFromString(@"MKCUDeviceDataController")]) {
+        if ([vc isKindOfClass:NSClassFromString(@"MKCSDeviceDataController")]) {
             //如果是从扫描页面进来的
-            [self popToViewControllerWithClassName:@"MKCUDeviceDataController"];
+            [self popToViewControllerWithClassName:@"MKCSDeviceDataController"];
             break;
         }
     }
@@ -274,9 +274,9 @@ MKTextFieldCellDelegate>
     return _dataList;
 }
 
-- (MKCUButtonDFUModel *)dataModel {
+- (MKCSButtonDFUModel *)dataModel {
     if (!_dataModel) {
-        _dataModel = [[MKCUButtonDFUModel alloc] init];
+        _dataModel = [[MKCSButtonDFUModel alloc] init];
         _dataModel.bleMac = self.bleMacAddress;
     }
     return _dataModel;

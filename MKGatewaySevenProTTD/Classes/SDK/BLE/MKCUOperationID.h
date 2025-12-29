@@ -16,6 +16,8 @@ typedef NS_ENUM(NSInteger, mk_cu_taskOperationID) {
     mk_cu_taskReadDeviceWifiSTAMacAddressOperation, //读取WIFI STA MAC地址
     mk_cu_taskReadNTPServerHostOperation,       //读取NTP服务器域名
     mk_cu_taskReadTimeZoneOperation,            //读取时区
+    mk_cu_taskReadWifiFirmwareOperation,        //读取wifi固件版本
+    mk_cu_taskReadBLEFirmwareOperation,         //读取BLE固件版本
     
 #pragma mark - Wifi Params
     mk_cu_taskReadWIFISecurityOperation,        //读取设备当前wifi的加密模式
@@ -61,12 +63,14 @@ typedef NS_ENUM(NSInteger, mk_cu_taskOperationID) {
     mk_cu_taskReadBeaconAdvIntervalOperation,           //读取Adv interval
     mk_cu_taskReadBeaconTxPowerOperation,               //读取Tx Power
     mk_cu_taskReadBeaconRssiOperation,                      //读取RSSI@1m
+    mk_cu_taskReadConnectableOperation,                 //读取可连接状态
     
 #pragma mark - 计电量参数
     mk_cu_taskReadMeteringSwitchOperation,              //读取计量数据上报开关
     mk_cu_taskReadPowerReportIntervalOperation,         //读取电量数据上报间隔
     mk_cu_taskReadEnergyReportIntervalOperation,        //读取电能数据上报间隔
     mk_cu_taskReadLoadDetectionNotificationStatusOperation, //读取负载检测通知开关
+    mk_cu_taskReadDeviceModeOperation,                  //读取设备模式
     
     
 #pragma mark - 密码特征
@@ -92,9 +96,7 @@ typedef NS_ENUM(NSInteger, mk_cu_taskOperationID) {
     mk_cu_taskConfigWIFIClientPrivateKeyOperation,      //配置WIFI私钥
     mk_cu_taskConfigWIFIDHCPStatusOperation,                //配置Wifi DHCP开关
     mk_cu_taskConfigWIFIIpInfoOperation,                    //配置Wifi IP地址相关信息
-    mk_cu_taskConfigNetworkTypeOperation,                   //配置网络接口类型
-    mk_cu_taskConfigEthernetDHCPStatusOperation,            //配置Ethernet DHCP开关
-    mk_cu_taskConfigEthernetIpInfoOperation,                //配置Ethernet IP地址相关信息
+    mk_cu_taskStartWifiScanOperation,                       //进行一次wifi扫描
     
 #pragma mark - MQTT Params
     mk_cu_taskConfigServerHostOperation,        //配置MQTT服务器域名
@@ -131,6 +133,7 @@ typedef NS_ENUM(NSInteger, mk_cu_taskOperationID) {
     mk_cu_taskConfigAdvIntervalOperation,                   //配置广播频率
     mk_cu_taskConfigTxPowerOperation,                       //配置Tx Power
     mk_cu_taskConfigBeaconRssiOperation,                        //配置Beacon Rssi@1m
+    mk_cu_taskConfigConnectableOperation,                   //配置可连接状态
     
 #pragma mark - 计电量参数
     mk_cu_taskConfigMeteringSwitchOperation,                //配置计量数据上报开关

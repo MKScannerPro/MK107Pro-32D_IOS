@@ -472,9 +472,49 @@ PODS:
   - MKGatewaySevenProTTD/Expand/View (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
+    - MKGatewaySevenProTTD/Expand/View/AdvNormalCell (= 0.1.0)
+    - MKGatewaySevenProTTD/Expand/View/AdvTriggerCell (= 0.1.0)
+    - MKGatewaySevenProTTD/Expand/View/AdvTriggerTwoStateCell (= 0.1.0)
     - MKGatewaySevenProTTD/Expand/View/AlertView (= 0.1.0)
+    - MKGatewaySevenProTTD/Expand/View/BleWifiSettingsCertCell (= 0.1.0)
+    - MKGatewaySevenProTTD/Expand/View/ButtonFirmwareCell (= 0.1.0)
+    - MKGatewaySevenProTTD/Expand/View/BXPAdvParamsCell (= 0.1.0)
+    - MKGatewaySevenProTTD/Expand/View/BXPButtonAccHeaderView (= 0.1.0)
+    - MKGatewaySevenProTTD/Expand/View/MKCUFilterCell (= 0.1.0)
+    - MKGatewaySevenProTTD/Expand/View/PressEventCountCell (= 0.1.0)
+    - MKGatewaySevenProTTD/Expand/View/RemoteReminderCell (= 0.1.0)
     - MKGatewaySevenProTTD/Expand/View/UserCredentialsView (= 0.1.0)
+  - MKGatewaySevenProTTD/Expand/View/AdvNormalCell (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+  - MKGatewaySevenProTTD/Expand/View/AdvTriggerCell (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+  - MKGatewaySevenProTTD/Expand/View/AdvTriggerTwoStateCell (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
   - MKGatewaySevenProTTD/Expand/View/AlertView (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+  - MKGatewaySevenProTTD/Expand/View/BleWifiSettingsCertCell (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+  - MKGatewaySevenProTTD/Expand/View/ButtonFirmwareCell (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+  - MKGatewaySevenProTTD/Expand/View/BXPAdvParamsCell (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+  - MKGatewaySevenProTTD/Expand/View/BXPButtonAccHeaderView (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+  - MKGatewaySevenProTTD/Expand/View/MKCUFilterCell (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+  - MKGatewaySevenProTTD/Expand/View/PressEventCountCell (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+  - MKGatewaySevenProTTD/Expand/View/RemoteReminderCell (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
   - MKGatewaySevenProTTD/Expand/View/UserCredentialsView (0.1.0):
@@ -516,11 +556,15 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleScannerFilterPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ConnectSuccessPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/DeviceParamsListPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/DeviceParamsListV2Page (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NearbyWifiPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
@@ -560,6 +604,39 @@ PODS:
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page/Model
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoPage (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
@@ -584,6 +661,39 @@ PODS:
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page/Model
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page/Model (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
     - MKGatewaySevenProTTD/CTMediator
@@ -647,6 +757,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/Model
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/View
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NearbyWifiPage
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
@@ -716,6 +827,67 @@ PODS:
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ConnectSuccessPage
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/DeviceParamsListV2Page (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/DeviceParamsListV2Page/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/DeviceParamsListV2Page/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleScannerFilterPage
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ConnectSuccessPage
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NearbyWifiPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NearbyWifiPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NearbyWifiPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NearbyWifiPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NearbyWifiPage/View
+    - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NearbyWifiPage/View (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/AddDeviceModules/ParamsModel
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
@@ -896,6 +1068,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByButtonPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByMacPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByNanoBeaconPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataPage (= 0.1.0)
@@ -1071,6 +1244,36 @@ PODS:
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/FilterPages/FilterByNanoBeaconPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByNanoBeaconPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByNanoBeaconPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/FilterPages/FilterByNanoBeaconPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByNanoBeaconPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/FilterPages/FilterByNanoBeaconPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
@@ -1150,6 +1353,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByButtonPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByNanoBeaconPage
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataPage/Model
@@ -2242,7 +2446,7 @@ SPEC CHECKSUMS:
   MKBaseModuleLibrary: 2b79bcae588c755588413fbb643b510253271b23
   MKBaseMQTTModule: 6a934ccf507e0eb807ef8f8a74dacd5d60216834
   MKCustomUIModule: 8426eba1d3178b06d92741d31da32502920fb8fa
-  MKGatewaySevenProTTD: 453157d5b669f1c5e549d16e7f67678a3278fe32
+  MKGatewaySevenProTTD: 3df4f5edf4240a2a57660ae3adf2baef234cafbe
   MKIotCloudManager: 241bd4bb7fae48e6b031c69a40c26637aabe67be
   MLInputDodger: 79a0e420a80d0d3bba122bf2639603cc76609ba8
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef

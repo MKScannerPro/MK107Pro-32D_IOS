@@ -49,6 +49,11 @@ typedef NS_ENUM(NSInteger, mk_cu_PHYMode) {
     mk_bv_PHYMode_CodedBLE5,                //Coded PHY(BLE 5)
 };
 
+typedef NS_ENUM(NSInteger, mk_cu_filterByNanoBeaconAdvType) {
+    mk_cu_filterByNanoBeaconAdvType_normal,
+    mk_cu_filterByNanoBeaconAdvType_trigger,
+    mk_cu_filterByNanoBeaconAdvType_all
+};
 
 @protocol cu_indicatorLightStatusProtocol <NSObject>
 

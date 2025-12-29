@@ -90,8 +90,48 @@
           "name": "View",
           "subspecs": [
             {
+              "name": "AdvNormalCell",
+              "source_files": "MKGatewaySevenProTTD/Classes/Expand/View/AdvNormalCell/**"
+            },
+            {
+              "name": "AdvTriggerCell",
+              "source_files": "MKGatewaySevenProTTD/Classes/Expand/View/AdvTriggerCell/**"
+            },
+            {
+              "name": "AdvTriggerTwoStateCell",
+              "source_files": "MKGatewaySevenProTTD/Classes/Expand/View/AdvTriggerTwoStateCell/**"
+            },
+            {
               "name": "AlertView",
               "source_files": "MKGatewaySevenProTTD/Classes/Expand/View/AlertView/**"
+            },
+            {
+              "name": "BleWifiSettingsCertCell",
+              "source_files": "MKGatewaySevenProTTD/Classes/Expand/View/BleWifiSettingsCertCell/**"
+            },
+            {
+              "name": "ButtonFirmwareCell",
+              "source_files": "MKGatewaySevenProTTD/Classes/Expand/View/ButtonFirmwareCell/**"
+            },
+            {
+              "name": "BXPAdvParamsCell",
+              "source_files": "MKGatewaySevenProTTD/Classes/Expand/View/BXPAdvParamsCell/**"
+            },
+            {
+              "name": "BXPButtonAccHeaderView",
+              "source_files": "MKGatewaySevenProTTD/Classes/Expand/View/BXPButtonAccHeaderView/**"
+            },
+            {
+              "name": "MKCUFilterCell",
+              "source_files": "MKGatewaySevenProTTD/Classes/Expand/View/MKCUFilterCell/**"
+            },
+            {
+              "name": "PressEventCountCell",
+              "source_files": "MKGatewaySevenProTTD/Classes/Expand/View/PressEventCountCell/**"
+            },
+            {
+              "name": "RemoteReminderCell",
+              "source_files": "MKGatewaySevenProTTD/Classes/Expand/View/RemoteReminderCell/**"
             },
             {
               "name": "UserCredentialsView",
@@ -193,6 +233,22 @@
                   ]
                 },
                 {
+                  "name": "BleDeviceInfoV2Page",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page/Model/**"
+                    }
+                  ]
+                },
+                {
                   "name": "BleScannerFilterPage",
                   "subspecs": [
                     {
@@ -216,7 +272,8 @@
                       "source_files": "MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/Controller/**",
                       "dependencies": {
                         "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/Model": [],
-                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/View": []
+                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/View": [],
+                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NearbyWifiPage": []
                       }
                     },
                     {
@@ -246,6 +303,22 @@
                   ]
                 },
                 {
+                  "name": "BleAdvBeaconV2Page",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page/Model/**"
+                    }
+                  ]
+                },
+                {
                   "name": "ConnectSuccessPage",
                   "subspecs": [
                     {
@@ -269,6 +342,40 @@
                         "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage": [],
                         "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice": []
                       }
+                    }
+                  ]
+                },
+                {
+                  "name": "DeviceParamsListV2Page",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/DeviceParamsListV2Page/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page": [],
+                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page": [],
+                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage": [],
+                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleScannerFilterPage": [],
+                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ConnectSuccessPage": [],
+                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage": [],
+                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice": []
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "NearbyWifiPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/NearbyWifiPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NearbyWifiPage/View": []
+                      }
+                    },
+                    {
+                      "name": "View",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/NearbyWifiPage/View/**"
                     }
                   ]
                 },
@@ -451,6 +558,22 @@
               ]
             },
             {
+              "name": "FilterByNanoBeaconPage",
+              "subspecs": [
+                {
+                  "name": "Controller",
+                  "source_files": "MKGatewaySevenProTTD/Classes/Functions/FilterPages/FilterByNanoBeaconPage/Controller/**",
+                  "dependencies": {
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByNanoBeaconPage/Model": []
+                  }
+                },
+                {
+                  "name": "Model",
+                  "source_files": "MKGatewaySevenProTTD/Classes/Functions/FilterPages/FilterByNanoBeaconPage/Model/**"
+                }
+              ]
+            },
+            {
               "name": "FilterByOtherPage",
               "subspecs": [
                 {
@@ -498,6 +621,7 @@
                     "MKGatewaySevenProTTD/Functions/FilterPages/FilterByButtonPage": [],
                     "MKGatewaySevenProTTD/Functions/FilterPages/FilterByTag": [],
                     "MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByNanoBeaconPage": [],
                     "MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage": []
                   }
                 },

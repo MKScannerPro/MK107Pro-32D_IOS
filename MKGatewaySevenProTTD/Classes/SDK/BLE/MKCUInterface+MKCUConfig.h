@@ -306,6 +306,12 @@ NS_ASSUME_NONNULL_BEGIN
                       sucBlock:(void (^)(void))sucBlock
                    failedBlock:(void (^)(NSError *error))failedBlock;
 
+/// Start wife scan.
+/// @param sucBlock Success callback
+/// @param failedBlock Failure callback
++ (void)cu_startWifiScanWithSucBlock:(void (^)(void))sucBlock
+                         failedBlock:(void (^)(NSError *error))failedBlock;
+
 #pragma mark *********************Filter Params************************
 
 /// The device will uplink valid ADV data with RSSI no less than rssi dBm.
@@ -417,6 +423,15 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)cu_configBeaconRssi:(NSInteger)rssi
                    sucBlock:(void (^)(void))sucBlock
                 failedBlock:(void (^)(NSError *error))failedBlock;
+
+/// Connectable.
+/// - Parameters:
+///   - connectable: connectable
+///   - sucBlock: Success callback
+///   - failedBlock: Failure callback
++ (void)cu_configConnectable:(BOOL)connectable
+                    sucBlock:(void (^)(void))sucBlock
+                 failedBlock:(void (^)(NSError *error))failedBlock;
 
 #pragma mark *********************Metering Params************************
 

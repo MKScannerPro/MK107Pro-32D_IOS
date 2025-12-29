@@ -152,6 +152,16 @@ NSString *const mk_cu_contentKey = @"mk_cu_contentKey";
             @"timeZone":[MKBLEBaseSDKAdopter signedHexTurnString:content],
         };
         operationID = mk_cu_taskReadTimeZoneOperation;
+    }else if ([cmd isEqualToString:@"13"]) {
+        //读取wifi固件版本
+        NSString *firmware = [[NSString alloc] initWithData:[data subdataWithRange:NSMakeRange(4, data.length - 4)] encoding:NSUTF8StringEncoding];
+        resultDic = @{@"firmware":firmware};
+        operationID = mk_cu_taskReadWifiFirmwareOperation;
+    }else if ([cmd isEqualToString:@"16"]) {
+        //读取BLE固件版本
+        NSString *firmware = [[NSString alloc] initWithData:[data subdataWithRange:NSMakeRange(4, data.length - 4)] encoding:NSUTF8StringEncoding];
+        resultDic = @{@"firmware":firmware};
+        operationID = mk_cu_taskReadBLEFirmwareOperation;
     }else if ([cmd isEqualToString:@"20"]) {
         //读取MQTT服务器域名
         NSString *host = @"";
@@ -400,6 +410,11 @@ NSString *const mk_cu_contentKey = @"mk_cu_contentKey";
             @"rssi":[NSString stringWithFormat:@"%@",[MKBLEBaseSDKAdopter signedHexTurnString:content]],
         };
         operationID = mk_cu_taskReadBeaconRssiOperation;
+    }else if ([cmd isEqualToString:@"77"]) {
+        //读取可连接状态
+        BOOL connectable = ([content isEqualToString:@"01"]);
+        resultDic = @{@"connectable":@(connectable)};
+        operationID = mk_cu_taskReadConnectableOperation;
     }else if ([cmd isEqualToString:@"80"]) {
         //读取计量数据上报开关
         BOOL isOn = ([content isEqualToString:@"01"]);
@@ -420,6 +435,11 @@ NSString *const mk_cu_contentKey = @"mk_cu_contentKey";
         BOOL isOn = ([content isEqualToString:@"01"]);
         resultDic = @{@"isOn":@(isOn)};
         operationID = mk_cu_taskReadLoadDetectionNotificationStatusOperation;
+    }else if ([cmd isEqualToString:@"c0"]) {
+        //读取设备模式
+        NSString *mode = [MKBLEBaseSDKAdopter getDecimalStringWithHex:content range:NSMakeRange(0, content.length)];
+        resultDic = @{@"mode":mode};
+        operationID = mk_cu_taskReadDeviceModeOperation;
     }
     
     return [self dataParserGetDataSuccess:resultDic operationID:operationID];
@@ -509,6 +529,9 @@ NSString *const mk_cu_contentKey = @"mk_cu_contentKey";
     }else if ([cmd isEqualToString:@"4c"]) {
         //配置Wifi IP地址相关信息
         operationID = mk_cu_taskConfigWIFIIpInfoOperation;
+    }else if ([cmd isEqualToString:@"50"]) {
+        //进行一次wifi扫描
+        operationID = mk_cu_taskStartWifiScanOperation;
     }else if ([cmd isEqualToString:@"60"]) {
         //配置扫描RSSI过滤
         operationID = mk_cu_taskConfigRssiFilterValueOperation;
@@ -539,6 +562,9 @@ NSString *const mk_cu_contentKey = @"mk_cu_contentKey";
     }else if ([cmd isEqualToString:@"76"]) {
         //配置Beacon Rssi@1m
         operationID = mk_cu_taskConfigBeaconRssiOperation;
+    }else if ([cmd isEqualToString:@"77"]) {
+        //配置可连接状态
+        operationID = mk_cu_taskConfigConnectableOperation;
     }else if ([cmd isEqualToString:@"80"]) {
         //配置计量数据上报开关
         operationID = mk_cu_taskConfigMeteringSwitchOperation;

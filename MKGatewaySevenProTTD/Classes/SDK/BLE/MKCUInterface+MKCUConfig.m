@@ -773,6 +773,15 @@ static const NSInteger packDataMaxLen = 150;
                    failedBlock:failedBlock];
 }
 
++ (void)cu_startWifiScanWithSucBlock:(void (^)(void))sucBlock
+                         failedBlock:(void (^)(NSError *error))failedBlock {
+    NSString *commandString = @"ed015000";
+    [self configDataWithTaskID:mk_cu_taskStartWifiScanOperation
+                          data:commandString
+                      sucBlock:sucBlock
+                   failedBlock:failedBlock];
+}
+
 #pragma mark *********************Filter Params************************
 
 + (void)cu_configRssiFilterValue:(NSInteger)rssi
@@ -1009,6 +1018,16 @@ static const NSInteger packDataMaxLen = 150;
     NSString *rssiValue = [MKBLEBaseSDKAdopter hexStringFromSignedNumber:rssi];
     NSString *commandString = [NSString stringWithFormat:@"%@%@",@"ed017601",rssiValue];
     [self configDataWithTaskID:mk_cu_taskConfigBeaconRssiOperation
+                          data:commandString
+                      sucBlock:sucBlock
+                   failedBlock:failedBlock];
+}
+
++ (void)cu_configConnectable:(BOOL)connectable
+                    sucBlock:(void (^)(void))sucBlock
+                 failedBlock:(void (^)(NSError *error))failedBlock {
+    NSString *commandString = (connectable ? @"ed01770101" : @"ed01770100");
+    [self configDataWithTaskID:mk_cu_taskConfigConnectableOperation
                           data:commandString
                       sucBlock:sucBlock
                    failedBlock:failedBlock];

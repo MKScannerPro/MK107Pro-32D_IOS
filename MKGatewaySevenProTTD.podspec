@@ -99,14 +99,52 @@ TODO: Add long description of the pod here.
     end
     
     ss.subspec 'View' do |sss|
+      sss.subspec 'AdvNormalCell' do |ssss|
+        ssss.source_files = 'MKGatewaySevenProTTD/Classes/Expand/View/AdvNormalCell/**'
+      end
+      
+      sss.subspec 'AdvTriggerCell' do |ssss|
+        ssss.source_files = 'MKGatewaySevenProTTD/Classes/Expand/View/AdvTriggerCell/**'
+      end
+      
+      sss.subspec 'AdvTriggerTwoStateCell' do |ssss|
+        ssss.source_files = 'MKGatewaySevenProTTD/Classes/Expand/View/AdvTriggerTwoStateCell/**'
+      end
+      
       sss.subspec 'AlertView' do |ssss|
         ssss.source_files = 'MKGatewaySevenProTTD/Classes/Expand/View/AlertView/**'
       end
       
+      sss.subspec 'BleWifiSettingsCertCell' do |ssss|
+        ssss.source_files = 'MKGatewaySevenProTTD/Classes/Expand/View/BleWifiSettingsCertCell/**'
+      end
+      
+      sss.subspec 'ButtonFirmwareCell' do |ssss|
+        ssss.source_files = 'MKGatewaySevenProTTD/Classes/Expand/View/ButtonFirmwareCell/**'
+      end
+      
+      sss.subspec 'BXPAdvParamsCell' do |ssss|
+        ssss.source_files = 'MKGatewaySevenProTTD/Classes/Expand/View/BXPAdvParamsCell/**'
+      end
+      
+      sss.subspec 'BXPButtonAccHeaderView' do |ssss|
+        ssss.source_files = 'MKGatewaySevenProTTD/Classes/Expand/View/BXPButtonAccHeaderView/**'
+      end
+      
+      sss.subspec 'MKCUFilterCell' do |ssss|
+        ssss.source_files = 'MKGatewaySevenProTTD/Classes/Expand/View/MKCUFilterCell/**'
+      end
+      
+      sss.subspec 'PressEventCountCell' do |ssss|
+        ssss.source_files = 'MKGatewaySevenProTTD/Classes/Expand/View/PressEventCountCell/**'
+      end
+      
+      sss.subspec 'RemoteReminderCell' do |ssss|
+        ssss.source_files = 'MKGatewaySevenProTTD/Classes/Expand/View/RemoteReminderCell/**'
+      end
+      
       sss.subspec 'UserCredentialsView' do |ssss|
-        
         ssss.source_files = 'MKGatewaySevenProTTD/Classes/Expand/View/UserCredentialsView/**'
-        
       end
         
     end
@@ -173,6 +211,18 @@ TODO: Add long description of the pod here.
                 end
             end
             
+            ssss.subspec 'BleDeviceInfoV2Page' do |sssss|
+                sssss.subspec 'Controller' do |ssssss|
+                  ssssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page/Controller/**'
+                  
+                  ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page/Model'
+                end
+                
+                sssss.subspec 'Model' do |ssssss|
+                  ssssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page/Model/**'
+                end
+            end
+            
             ssss.subspec 'BleScannerFilterPage' do |sssss|
                 sssss.subspec 'Controller' do |ssssss|
                   ssssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/BleScannerFilterPage/Controller/**'
@@ -191,6 +241,8 @@ TODO: Add long description of the pod here.
                   
                   ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/Model'
                   ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage/View'
+                  
+                  ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NearbyWifiPage'
                 end
                 
                 sssss.subspec 'Model' do |ssssss|
@@ -214,6 +266,18 @@ TODO: Add long description of the pod here.
                 end
             end
             
+            ssss.subspec 'BleAdvBeaconV2Page' do |sssss|
+                sssss.subspec 'Controller' do |ssssss|
+                  ssssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page/Controller/**'
+                  
+                  ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page/Model'
+                end
+                
+                sssss.subspec 'Model' do |ssssss|
+                  ssssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page/Model/**'
+                end
+            end
+            
             ssss.subspec 'ConnectSuccessPage' do |sssss|
                 sssss.subspec 'Controller' do |ssssss|
                   ssssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/ConnectSuccessPage/Controller/**'
@@ -231,6 +295,32 @@ TODO: Add long description of the pod here.
                 ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ConnectSuccessPage'
                 ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage'
                 ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice'
+              end
+            end
+            
+            ssss.subspec 'DeviceParamsListV2Page' do |sssss|
+              sssss.subspec 'Controller' do |ssssss|
+                ssssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/DeviceParamsListV2Page/Controller/**'
+              
+                ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleAdvBeaconV2Page'
+                ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleDeviceInfoV2Page'
+                ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleWifiSettingsPage'
+                ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/BleScannerFilterPage'
+                ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ConnectSuccessPage'
+                ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NTPTimezonePage'
+                ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/ServerForDevice'
+              end
+            end
+            
+            ssss.subspec 'NearbyWifiPage' do |sssss|
+              sssss.subspec 'Controller' do |ssssss|
+                ssssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/NearbyWifiPage/Controller/**'
+                
+                ssssss.dependency 'MKGatewaySevenProTTD/Functions/AddDeviceModules/Pages/NearbyWifiPage/View'
+              end
+              
+              sssss.subspec 'View' do |ssssss|
+                ssssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/AddDeviceModules/Pages/NearbyWifiPage/View/**'
               end
             end
             
@@ -382,6 +472,19 @@ TODO: Add long description of the pod here.
         end
       end
       
+      sss.subspec 'FilterByNanoBeaconPage' do |ssss|
+        ssss.subspec 'Controller' do |sssss|
+          sssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/FilterPages/FilterByNanoBeaconPage/Controller/**'
+        
+          sssss.dependency 'MKGatewaySevenProTTD/Functions/FilterPages/FilterByNanoBeaconPage/Model'
+          
+        end
+      
+        ssss.subspec 'Model' do |sssss|
+          sssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/FilterPages/FilterByNanoBeaconPage/Model/**'
+        end
+      end
+      
       sss.subspec 'FilterByOtherPage' do |ssss|
         ssss.subspec 'Controller' do |sssss|
           sssss.source_files = 'MKGatewaySevenProTTD/Classes/Functions/FilterPages/FilterByOtherPage/Controller/**'
@@ -422,6 +525,7 @@ TODO: Add long description of the pod here.
           sssss.dependency 'MKGatewaySevenProTTD/Functions/FilterPages/FilterByButtonPage'
           sssss.dependency 'MKGatewaySevenProTTD/Functions/FilterPages/FilterByTag'
           sssss.dependency 'MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage'
+          sssss.dependency 'MKGatewaySevenProTTD/Functions/FilterPages/FilterByNanoBeaconPage'
           sssss.dependency 'MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage'
           
         end
