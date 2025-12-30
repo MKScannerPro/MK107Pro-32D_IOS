@@ -59,7 +59,13 @@
         success = YES;
         self.timestamp = ([returnData[@"data"][@"timestamp"] integerValue] == 1);
         self.rawData_advertising = ([returnData[@"data"][@"adv_data"] integerValue] == 1);
-        self.rawData_response = ([returnData[@"data"][@"rsp_data"] integerValue] == 1);
+        if ([MKCUDeviceModeManager shared].isV2) {
+            //V2
+            self.parsed_data = ([returnData[@"data"][@"parse_adv_data"] integerValue] == 1);
+        }else {
+            //V2中无此参数
+            self.rawData_response = ([returnData[@"data"][@"rsp_data"] integerValue] == 1);
+        }
         dispatch_semaphore_signal(self.semaphore);
     } failedBlock:^(NSError * _Nonnull error) {
         dispatch_semaphore_signal(self.semaphore);
@@ -70,6 +76,7 @@
 
 - (BOOL)configUploadDataOption {
     __block BOOL success = NO;
+    self.isV2 = [MKCUDeviceModeManager shared].isV2;
     [MKCUMQTTInterface cu_configUploadDataOption:self macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         success = YES;
         dispatch_semaphore_signal(self.semaphore);

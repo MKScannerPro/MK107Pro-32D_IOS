@@ -1,6 +1,6 @@
 //
-//  MKCSBXPButtonCRAlarmEventModel.h
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonCRAlarmEventModel.h
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/3/27.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKCSBXPButtonCRAlarmEventModel : NSObject
+@interface MKCUBXPButtonCRAlarmEventModel : NSObject
 
 - (void)notifyDataWithBleMac:(NSString *)bleMac
                       notify:(BOOL)notify

@@ -101,7 +101,12 @@ mk_textSwitchCellDelegate>
     }
     if (index == 2) {
         //RAW Data-Response
-        self.dataModel.rawData_response = isOn;
+        if ([MKCUDeviceModeManager shared].isV2) {
+            //V2
+            self.dataModel.parsed_data = isOn;
+        }else {
+            self.dataModel.rawData_response = isOn;
+        }
         return;
     }
 }
@@ -145,14 +150,20 @@ mk_textSwitchCellDelegate>
     
     MKTextSwitchCellModel *cellModel2 = [[MKTextSwitchCellModel alloc] init];
     cellModel2.index = 1;
-    cellModel2.msg = @"RAW Data-Advertising";
+    cellModel2.msg = ([MKCUDeviceModeManager shared].isV2 ? @"Raw Data" : @"RAW Data-Advertising");
     cellModel2.isOn = self.dataModel.rawData_advertising;
     [self.dataList addObject:cellModel2];
     
     MKTextSwitchCellModel *cellModel3 = [[MKTextSwitchCellModel alloc] init];
     cellModel3.index = 2;
-    cellModel3.msg = @"RAW Data-Response";
-    cellModel3.isOn = self.dataModel.rawData_response;
+    if ([MKCUDeviceModeManager shared].isV2) {
+        //V2
+        cellModel3.msg = @"Parsed data";
+        cellModel3.isOn = self.dataModel.parsed_data;
+    }else {
+        cellModel3.msg = @"RAW Data-Response";
+        cellModel3.isOn = self.dataModel.rawData_response;
+    }
     [self.dataList addObject:cellModel3];
     
     [self.tableView reloadData];

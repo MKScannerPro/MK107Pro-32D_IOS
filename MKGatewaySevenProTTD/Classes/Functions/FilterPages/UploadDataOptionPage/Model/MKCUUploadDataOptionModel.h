@@ -14,11 +14,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MKCUUploadDataOptionModel : NSObject<cu_uploadDataOptionProtocol>
 
+/// V2版本固件
+@property (nonatomic, assign)BOOL isV2;
+
 @property (nonatomic, assign)BOOL timestamp;
 
 @property (nonatomic, assign)BOOL rawData_advertising;
 
+/// V2中无此参数
 @property (nonatomic, assign)BOOL rawData_response;
+
+/// V2中有此参数
+@property (nonatomic, assign)BOOL parsed_data;
 
 - (void)readDataWithSucBlock:(void (^)(void))sucBlock failedBlock:(void (^)(NSError *error))failedBlock;
 

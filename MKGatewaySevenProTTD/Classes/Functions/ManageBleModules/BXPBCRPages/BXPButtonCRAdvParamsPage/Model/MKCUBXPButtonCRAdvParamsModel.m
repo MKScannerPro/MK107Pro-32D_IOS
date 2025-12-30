@@ -1,20 +1,20 @@
 //
-//  MKCSBXPButtonCRAdvParamsModel.m
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonCRAdvParamsModel.m
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/1/21.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSBXPButtonCRAdvParamsModel.h"
+#import "MKCUBXPButtonCRAdvParamsModel.h"
 
 #import "MKMacroDefines.h"
 
-#import "MKCSDeviceModeManager.h"
+#import "MKCUDeviceModeManager.h"
 
-#import "MKCSMQTTInterface.h"
+#import "MKCUMQTTInterface.h"
 
-@interface MKCSBXPButtonCRAdvParamsModel ()
+@interface MKCUBXPButtonCRAdvParamsModel ()
 
 @property (nonatomic, strong)dispatch_queue_t readQueue;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation MKCSBXPButtonCRAdvParamsModel
+@implementation MKCUBXPButtonCRAdvParamsModel
 
 - (void)readDataWithBleMac:(NSString *)bleMac
                   sucBlock:(void (^)(void))sucBlock
@@ -41,7 +41,7 @@
 #pragma mark - interface
 - (BOOL)readButtonAdvParams:(NSString *)bleMac {
     __block BOOL success = NO;
-    [MKCSMQTTInterface cs_bxpBtnCRReadAdvParamsWithBleMac:bleMac macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_bxpBtnCRReadAdvParamsWithBleMac:bleMac macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         success = YES;
         self.dataList = returnData[@"data"][@"adv_param"];
         dispatch_semaphore_signal(self.semaphore);

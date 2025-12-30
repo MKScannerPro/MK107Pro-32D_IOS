@@ -1,20 +1,20 @@
 //
-//  MKCSButtonDFUModel.m
-//  MKGatewayMiniTwo_Example
+//  MKCUButtonDFUModel.m
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2024/11/01.
 //  Copyright © 2024 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSButtonDFUModel.h"
+#import "MKCUButtonDFUModel.h"
 
 #import "MKMacroDefines.h"
 
-#import "MKCSDeviceModeManager.h"
+#import "MKCUDeviceModeManager.h"
 
-#import "MKCSMQTTInterface.h"
+#import "MKCUMQTTInterface.h"
 
-@interface MKCSButtonDFUModel ()
+@interface MKCUButtonDFUModel ()
 
 @property (nonatomic, strong)dispatch_queue_t readQueue;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation MKCSButtonDFUModel
+@implementation MKCUButtonDFUModel
 
 - (void)configDataWithSucBlock:(void (^)(void))sucBlock failedBlock:(void (^)(NSError *error))failedBlock {
     dispatch_async(self.readQueue, ^{
@@ -45,7 +45,7 @@
 #pragma mark - interface
 - (BOOL)startDfu {
     __block BOOL success = NO;
-    [MKCSMQTTInterface cs_startBXPButtonDfuWithFirmwareUrl:self.firmwareUrl dataUrl:self.dataUrl bleMac:self.bleMac macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_startBXPButtonDfuWithFirmwareUrl:self.firmwareUrl dataUrl:self.dataUrl bleMac:self.bleMac macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         success = YES;
         dispatch_semaphore_signal(self.semaphore);
     } failedBlock:^(NSError * _Nonnull error) {

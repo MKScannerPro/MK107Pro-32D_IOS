@@ -1,20 +1,20 @@
 //
-//  MKCSBXPButtonCRAlarmEventModel.m
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonCRAlarmEventModel.m
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/3/27.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSBXPButtonCRAlarmEventModel.h"
+#import "MKCUBXPButtonCRAlarmEventModel.h"
 
 #import "MKMacroDefines.h"
 
-#import "MKCSDeviceModeManager.h"
+#import "MKCUDeviceModeManager.h"
 
-#import "MKCSMQTTInterface.h"
+#import "MKCUMQTTInterface.h"
 
-@interface MKCSBXPButtonCRAlarmEventModel ()
+@interface MKCUBXPButtonCRAlarmEventModel ()
 
 @property (nonatomic, strong)dispatch_queue_t readQueue;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation MKCSBXPButtonCRAlarmEventModel
+@implementation MKCUBXPButtonCRAlarmEventModel
 
 - (void)notifyDataWithBleMac:(NSString *)bleMac
                       notify:(BOOL)notify
@@ -44,9 +44,9 @@
 #pragma mark - interface
 - (BOOL)notifyAlarmEvent:(NSString *)bleMac
                   notify:(BOOL)notify
-               eventType:(mk_cs_bxpcrAlarmEventType)eventType {
+               eventType:(mk_cu_bxpcrAlarmEventType)eventType {
     __block BOOL success = NO;
-    [MKCSMQTTInterface cs_BXPCRNotifyAlarmDataWithBleMac:bleMac alarmEventType:eventType notify:notify macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_BXPCRNotifyAlarmDataWithBleMac:bleMac alarmEventType:eventType notify:notify macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         success = YES;
         dispatch_semaphore_signal(self.semaphore);
     } failedBlock:^(NSError * _Nonnull error) {

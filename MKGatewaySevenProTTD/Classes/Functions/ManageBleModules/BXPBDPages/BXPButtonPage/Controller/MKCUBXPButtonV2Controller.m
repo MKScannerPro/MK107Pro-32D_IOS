@@ -1,12 +1,12 @@
 //
-//  MKCSBXPButtonV2Controller.m
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonV2Controller.m
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2023/2/10.
 //  Copyright © 2023 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSBXPButtonV2Controller.h"
+#import "MKCUBXPButtonV2Controller.h"
 
 #import "Masonry.h"
 
@@ -25,27 +25,27 @@
 
 #import "MKBLEBaseSDKAdopter.h"
 
-#import "MKCSMQTTDataManager.h"
-#import "MKCSMQTTInterface.h"
+#import "MKCUMQTTDataManager.h"
+#import "MKCUMQTTInterface.h"
 
-#import "MKCSDeviceModeManager.h"
-#import "MKCSDeviceModel.h"
+#import "MKCUDeviceModeManager.h"
+#import "MKCUDeviceModel.h"
 
-#import "MKCSButtonFirmwareCell.h"
+#import "MKCUButtonFirmwareCell.h"
 
-#import "MKCSPressEventCountCell.h"
+#import "MKCUPressEventCountCell.h"
 
-#import "MKCSButtonDFUController.h"
-#import "MKCSButtonDFUV2Controller.h"
-#import "MKCSBXPButtonRemoteReminderController.h"
-#import "MKCSBXPButtonAccDataController.h"
-#import "MKCSBXPButtonAdvParamsController.h"
+#import "MKCUButtonDFUController.h"
+#import "MKCUButtonDFUV2Controller.h"
+#import "MKCUBXPButtonRemoteReminderController.h"
+#import "MKCUBXPButtonAccDataController.h"
+#import "MKCUBXPButtonAdvParamsController.h"
 
-@interface MKCSBXPButtonV2Controller ()<UITableViewDelegate,
+@interface MKCUBXPButtonV2Controller ()<UITableViewDelegate,
 UITableViewDataSource,
 MKButtonMsgCellDelegate,
-MKCSButtonFirmwareCellDelegate,
-MKCSPressEventCountCellDelegate>
+MKCUButtonFirmwareCellDelegate,
+MKCUPressEventCountCellDelegate>
 
 @property (nonatomic, strong)MKBaseTableView *tableView;
 
@@ -73,10 +73,10 @@ MKCSPressEventCountCellDelegate>
 
 @end
 
-@implementation MKCSBXPButtonV2Controller
+@implementation MKCUBXPButtonV2Controller
 
 - (void)dealloc {
-    NSLog(@"MKCSBXPButtonV2Controller销毁");
+    NSLog(@"MKCUBXPButtonV2Controller销毁");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -116,12 +116,12 @@ MKCSPressEventCountCellDelegate>
     MKAlertView *alertView = [[MKAlertView alloc] init];
     [alertView addAction:cancelAction];
     [alertView addAction:confirmAction];
-    [alertView showAlertWithTitle:@"" message:msg notificationName:@"mk_cs_needDismissAlert"];
+    [alertView showAlertWithTitle:@"" message:msg notificationName:@"mk_cu_needDismissAlert"];
 }
 
 - (void)leftButtonMethod {
-    //用户点击左上角，则需要返回MKCSDeviceDataController
-    [self popToViewControllerWithClassName:@"MKCSDeviceDataController"];
+    //用户点击左上角，则需要返回MKCUDeviceDataController
+    [self popToViewControllerWithClassName:@"MKCUDeviceDataController"];
 }
 
 #pragma mark - UITableViewDelegate
@@ -148,21 +148,21 @@ MKCSPressEventCountCellDelegate>
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 8 && indexPath.row == 0) {
         //Remote Reminder
-        MKCSBXPButtonRemoteReminderController *vc = [[MKCSBXPButtonRemoteReminderController alloc] init];
+        MKCUBXPButtonRemoteReminderController *vc = [[MKCUBXPButtonRemoteReminderController alloc] init];
         vc.bleMac = self.deviceBleInfo[@"data"][@"mac"];
         [self.navigationController pushViewController:vc animated:YES];
         return;
     }
     if (indexPath.section == 8 && indexPath.row == 1) {
         //Accelerometer data
-        MKCSBXPButtonAccDataController *vc = [[MKCSBXPButtonAccDataController alloc] init];
+        MKCUBXPButtonAccDataController *vc = [[MKCUBXPButtonAccDataController alloc] init];
         vc.bleMac = self.deviceBleInfo[@"data"][@"mac"];
         [self.navigationController pushViewController:vc animated:YES];
         return;
     }
     if (indexPath.section == 8 && indexPath.row == 2) {
         //Advertisement parameters
-        MKCSBXPButtonAdvParamsController *vc = [[MKCSBXPButtonAdvParamsController alloc] init];
+        MKCUBXPButtonAdvParamsController *vc = [[MKCUBXPButtonAdvParamsController alloc] init];
         vc.bleMac = self.deviceBleInfo[@"data"][@"mac"];
         [self.navigationController pushViewController:vc animated:YES];
         return;
@@ -217,7 +217,7 @@ MKCSPressEventCountCellDelegate>
         return cell;
     }
     if (indexPath.section == 1) {
-        MKCSButtonFirmwareCell *cell = [MKCSButtonFirmwareCell initCellWithTableView:tableView];
+        MKCUButtonFirmwareCell *cell = [MKCUButtonFirmwareCell initCellWithTableView:tableView];
         cell.dataModel = self.section1List[indexPath.row];
         cell.delegate = self;
         return cell;
@@ -239,7 +239,7 @@ MKCSPressEventCountCellDelegate>
         return cell;
     }
     if (indexPath.section == 5) {
-        MKCSPressEventCountCell *cell = [MKCSPressEventCountCell initCellWithTableView:tableView];
+        MKCUPressEventCountCell *cell = [MKCUPressEventCountCell initCellWithTableView:tableView];
         cell.dataModel =  self.section5List[indexPath.row];
         cell.delegate = self;
         return cell;
@@ -276,31 +276,31 @@ MKCSPressEventCountCellDelegate>
     }
 }
 
-#pragma mark - MKCSButtonFirmwareCellDelegate
-- (void)cs_buttonFirmwareCell_buttonAction:(NSInteger)index {
+#pragma mark - MKCUButtonFirmwareCellDelegate
+- (void)cu_buttonFirmwareCell_buttonAction:(NSInteger)index {
     if (index == 0) {
         //DFU
-        if ([MKCSDeviceModeManager shared].isV2) {
-            MKCSButtonDFUV2Controller *vc = [[MKCSButtonDFUV2Controller alloc] init];
+        if ([MKCUDeviceModeManager shared].isV2) {
+            MKCUButtonDFUV2Controller *vc = [[MKCUButtonDFUV2Controller alloc] init];
             vc.bleMacAddress = self.deviceBleInfo[@"data"][@"mac"];
             vc.type = 1;
             [self.navigationController pushViewController:vc animated:YES];
             return;
         }
-        MKCSButtonDFUController *vc = [[MKCSButtonDFUController alloc] init];
+        MKCUButtonDFUController *vc = [[MKCUButtonDFUController alloc] init];
         vc.bleMacAddress = self.deviceBleInfo[@"data"][@"mac"];
         [self.navigationController pushViewController:vc animated:YES];
         return;
     }
 }
 
-#pragma mark - MKCSPressEventCountCellDelegate
-- (void)cs_pressEventCountCell_clearButtonPressed:(NSInteger)index {
+#pragma mark - MKCUPressEventCountCellDelegate
+- (void)cu_pressEventCountCell_clearButtonPressed:(NSInteger)index {
     [[MKHudManager share] showHUDWithTitle:@"Waiting..." inView:self.view isPenetration:NO];
     
-    [MKCSMQTTInterface cs_clearTriggerEventCount:index bleMac:self.deviceBleInfo[@"data"][@"mac"] macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_clearTriggerEventCount:index bleMac:self.deviceBleInfo[@"data"][@"mac"] macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         [[MKHudManager share] hide];
-        MKCSPressEventCountCellModel *cellModel = self.section5List[index];
+        MKCUPressEventCountCellModel *cellModel = self.section5List[index];
         cellModel.count = @"0";
         [self.tableView mk_reloadRow:index inSection:5 withRowAnimation:UITableViewRowAnimationNone];
     } failedBlock:^(NSError * _Nonnull error) {
@@ -312,7 +312,7 @@ MKCSPressEventCountCellDelegate>
 #pragma mark - notes
 - (void)receiveDisconnect:(NSNotification *)note {
     NSDictionary *user = note.userInfo;
-    if (!ValidDict(user) || !ValidStr(user[@"device_info"][@"mac"]) || ![[MKCSDeviceModeManager shared].macAddress isEqualToString:user[@"device_info"][@"mac"]]) {
+    if (!ValidDict(user) || !ValidStr(user[@"device_info"][@"mac"]) || ![[MKCUDeviceModeManager shared].macAddress isEqualToString:user[@"device_info"][@"mac"]]) {
         return;
     }
     NSDictionary *dataDic = user[@"data"];
@@ -322,7 +322,7 @@ MKCSPressEventCountCellDelegate>
     if (![MKBaseViewController isCurrentViewControllerVisible:self]) {
         return;
     }
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"mk_cs_needDismissAlert" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"mk_cu_needDismissAlert" object:nil];
     //返回上一级页面
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -330,7 +330,7 @@ MKCSPressEventCountCellDelegate>
 #pragma mark - interface
 - (void)readDatasFromDevice {
     [[MKHudManager share] showHUDWithTitle:@"Reading..." inView:self.view isPenetration:NO];
-    [MKCSMQTTInterface cs_readBXPButtonConnectedStatusWithBleMacAddress:self.deviceBleInfo[@"data"][@"mac"] macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_readBXPButtonConnectedStatusWithBleMacAddress:self.deviceBleInfo[@"data"][@"mac"] macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         [[MKHudManager share] hide];
         if ([returnData[@"data"][@"result_code"] integerValue] != 0) {
             [self.view showCentralToast:@"Read Failed"];
@@ -346,7 +346,7 @@ MKCSPressEventCountCellDelegate>
 
 - (void)dismissAlarmStatus {
     [[MKHudManager share] showHUDWithTitle:@"Waiting..." inView:self.view isPenetration:NO];
-    [MKCSMQTTInterface cs_dismissBXPButtonAlarmStatusWithBleMacAddress:self.deviceBleInfo[@"data"][@"mac"] macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_dismissBXPButtonAlarmStatusWithBleMacAddress:self.deviceBleInfo[@"data"][@"mac"] macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         [[MKHudManager share] hide];
         if ([returnData[@"data"][@"result_code"] integerValue] != 0) {
             [self.view showCentralToast:@"Read Failed"];
@@ -361,7 +361,7 @@ MKCSPressEventCountCellDelegate>
 
 - (void)disconnect {
     [[MKHudManager share] showHUDWithTitle:@"Waiting..." inView:self.view isPenetration:NO];
-    [MKCSMQTTInterface cs_disconnectNormalBleDeviceWithBleMac:self.deviceBleInfo[@"data"][@"mac"] macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_disconnectNormalBleDeviceWithBleMac:self.deviceBleInfo[@"data"][@"mac"] macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         [[MKHudManager share] hide];
         [self.navigationController popViewControllerAnimated:YES];
     } failedBlock:^(NSError * _Nonnull error) {
@@ -372,7 +372,7 @@ MKCSPressEventCountCellDelegate>
 
 - (void)powerOffCmdToDevice {
     [[MKHudManager share] showHUDWithTitle:@"Waiting..." inView:self.view isPenetration:NO];
-    [MKCSMQTTInterface cs_bxpBtnRemotePowerOffWithBleMac:self.deviceBleInfo[@"data"][@"mac"] macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_bxpBtnRemotePowerOffWithBleMac:self.deviceBleInfo[@"data"][@"mac"] macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         [[MKHudManager share] hide];
         [self.navigationController popViewControllerAnimated:YES];
     } failedBlock:^(NSError * _Nonnull error) {
@@ -385,13 +385,13 @@ MKCSPressEventCountCellDelegate>
     MKNormalTextCellModel *cellModel1 = self.section4List[0];
     cellModel1.rightMsg = [NSString stringWithFormat:@"%@%@",self.bxpStatusDic[@"data"][@"battery_v"],@"mV"];
     
-    MKCSPressEventCountCellModel *cellModel2 = self.section5List[0];
+    MKCUPressEventCountCellModel *cellModel2 = self.section5List[0];
     cellModel2.count = [NSString stringWithFormat:@"%@",self.bxpStatusDic[@"data"][@"single_alarm_num"]];
     
-    MKCSPressEventCountCellModel *cellModel3 = self.section5List[1];
+    MKCUPressEventCountCellModel *cellModel3 = self.section5List[1];
     cellModel3.count = [NSString stringWithFormat:@"%@",self.bxpStatusDic[@"data"][@"double_alarm_num"]];
     
-    MKCSPressEventCountCellModel *cellModel4 = self.section5List[2];
+    MKCUPressEventCountCellModel *cellModel4 = self.section5List[2];
     cellModel4.count = [NSString stringWithFormat:@"%@",self.bxpStatusDic[@"data"][@"long_alarm_num"]];
     
     MKNormalTextCellModel *cellModel5 = self.section6List[0];
@@ -433,7 +433,7 @@ MKCSPressEventCountCellDelegate>
 - (void)addNotes {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveDisconnect:)
-                                                 name:MKCSReceiveGatewayDisconnectBXPButtonNotification
+                                                 name:MKCUReceiveGatewayDisconnectBXPButtonNotification
                                                object:nil];
 }
 
@@ -452,7 +452,7 @@ MKCSPressEventCountCellDelegate>
     [alertView addAction:confirmAction];
     [alertView showAlertWithTitle:@""
                           message:@"Please confirm again whether to power off BLE device"
-                 notificationName:@"mk_cs_needDismissAlert"];
+                 notificationName:@"mk_cu_needDismissAlert"];
     return;
 }
 
@@ -494,7 +494,7 @@ MKCSPressEventCountCellDelegate>
 }
 
 - (void)loadSection1Datas {
-    MKCSButtonFirmwareCellModel *cellModel = [[MKCSButtonFirmwareCellModel alloc] init];
+    MKCUButtonFirmwareCellModel *cellModel = [[MKCUButtonFirmwareCellModel alloc] init];
     cellModel.index = 0;
     cellModel.leftMsg = @"Firmware version";
     cellModel.rightMsg = SafeStr(self.deviceBleInfo[@"data"][@"firmware_version"]);
@@ -534,17 +534,17 @@ MKCSPressEventCountCellDelegate>
 }
 
 - (void)loadSection5Datas {
-    MKCSPressEventCountCellModel *cellModel1 = [[MKCSPressEventCountCellModel alloc] init];
+    MKCUPressEventCountCellModel *cellModel1 = [[MKCUPressEventCountCellModel alloc] init];
     cellModel1.index = 0;
     cellModel1.msg = @"Single press event count";
     [self.section5List addObject:cellModel1];
     
-    MKCSPressEventCountCellModel *cellModel2 = [[MKCSPressEventCountCellModel alloc] init];
+    MKCUPressEventCountCellModel *cellModel2 = [[MKCUPressEventCountCellModel alloc] init];
     cellModel2.index = 1;
     cellModel2.msg = @"Double press event count";
     [self.section5List addObject:cellModel2];
     
-    MKCSPressEventCountCellModel *cellModel3 = [[MKCSPressEventCountCellModel alloc] init];
+    MKCUPressEventCountCellModel *cellModel3 = [[MKCUPressEventCountCellModel alloc] init];
     cellModel3.index = 2;
     cellModel3.msg = @"Long press event count";
     [self.section5List addObject:cellModel3];
@@ -584,7 +584,7 @@ MKCSPressEventCountCellDelegate>
 
 #pragma mark - UI
 - (void)loadSubViews {
-    self.defaultTitle = [MKCSDeviceModeManager shared].deviceName;
+    self.defaultTitle = [MKCUDeviceModeManager shared].deviceName;
     [self.rightButton setTitle:@"Disconnect" forState:UIControlStateNormal];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -1,6 +1,6 @@
 //
-//  MKCSBXPButtonCRAlarmEventHeader.h
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonCRAlarmEventHeader.h
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/3/27.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
@@ -10,17 +10,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol MKCSBXPButtonCRAlarmEventHeaderDelegate <NSObject>
+@protocol MKCUBXPButtonCRAlarmEventHeaderDelegate <NSObject>
 
-- (void)cs_bxpButtonCRAlarmEventHeaderView_syncButtonPressed:(BOOL)isOn;
+- (void)cu_bxpButtonCRAlarmEventHeaderView_syncButtonPressed:(BOOL)isOn;
 
-- (void)cs_bxpButtonCRAlarmEventHeaderView_exportButtonPressed;
+- (void)cu_bxpButtonCRAlarmEventHeaderView_exportButtonPressed;
 
 @end
 
-@interface MKCSBXPButtonCRAlarmEventHeader : UIView
+@interface MKCUBXPButtonCRAlarmEventHeader : UIView
 
-@property (nonatomic, weak)id <MKCSBXPButtonCRAlarmEventHeaderDelegate>delegate;
+@property (nonatomic, weak)id <MKCUBXPButtonCRAlarmEventHeaderDelegate>delegate;
 
 - (void)updateSyncStatus:(BOOL)isOn;
 

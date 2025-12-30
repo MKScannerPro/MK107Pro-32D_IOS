@@ -1,16 +1,16 @@
 //
-//  MKCSButtonDFUV2Controller.h
-//  MKGatewayMiniTwo_Example
+//  MKCUButtonDFUV2Controller.h
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/6/20.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSBaseViewController.h"
+#import "MKCUBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKCSButtonDFUV2Controller : MKCSBaseViewController
+@interface MKCUButtonDFUV2Controller : MKCUBaseViewController
 
 /// 1:BXP-B-D   2:BXP-B-CR  3:BXP-C 4:BXP-D 5:BXP-TAG   6:BXP-S 7:PIR   8:TOF
 @property (nonatomic, assign)NSInteger type;

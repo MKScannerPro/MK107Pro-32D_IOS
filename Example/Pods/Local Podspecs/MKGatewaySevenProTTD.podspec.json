@@ -430,6 +430,7 @@
                 "MKGatewaySevenProTTD/Functions/DeviceDataPage/View": [],
                 "MKGatewaySevenProTTD/Functions/SettingPages": [],
                 "MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage": [],
+                "MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionV2Page": [],
                 "MKGatewaySevenProTTD/Functions/ManageBleModules": []
               }
             },
@@ -469,6 +470,22 @@
         {
           "name": "FilterPages",
           "subspecs": [
+            {
+              "name": "DataUploadIntervalPage",
+              "subspecs": [
+                {
+                  "name": "Controller",
+                  "source_files": "MKGatewaySevenProTTD/Classes/Functions/FilterPages/DataUploadIntervalPage/Controller/**",
+                  "dependencies": {
+                    "MKGatewaySevenProTTD/Functions/FilterPages/DataUploadIntervalPage/Model": []
+                  }
+                },
+                {
+                  "name": "Model",
+                  "source_files": "MKGatewaySevenProTTD/Classes/Functions/FilterPages/DataUploadIntervalPage/Model/**"
+                }
+              ]
+            },
             {
               "name": "DuplicateDataFilterPage",
               "subspecs": [
@@ -632,6 +649,31 @@
               ]
             },
             {
+              "name": "FilterByRawDataV2Page",
+              "subspecs": [
+                {
+                  "name": "Controller",
+                  "source_files": "MKGatewaySevenProTTD/Classes/Functions/FilterPages/FilterByRawDataV2Page/Controller/**",
+                  "dependencies": {
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataV2Page/Model": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByUIDPage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByURLPage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByTLMPage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByButtonPage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByTag": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByTofPage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage": []
+                  }
+                },
+                {
+                  "name": "Model",
+                  "source_files": "MKGatewaySevenProTTD/Classes/Functions/FilterPages/FilterByRawDataV2Page/Model/**"
+                }
+              ]
+            },
+            {
               "name": "FilterByTag",
               "subspecs": [
                 {
@@ -735,7 +777,6 @@
                   "source_files": "MKGatewaySevenProTTD/Classes/Functions/FilterPages/UploadOptionPage/Controller/**",
                   "dependencies": {
                     "MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/Model": [],
-                    "MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/View": [],
                     "MKGatewaySevenProTTD/Functions/FilterPages/DuplicateDataFilterPage": [],
                     "MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage": [],
                     "MKGatewaySevenProTTD/Functions/FilterPages/FilterByMacPage": [],
@@ -746,10 +787,28 @@
                 {
                   "name": "Model",
                   "source_files": "MKGatewaySevenProTTD/Classes/Functions/FilterPages/UploadOptionPage/Model/**"
+                }
+              ]
+            },
+            {
+              "name": "UploadOptionV2Page",
+              "subspecs": [
+                {
+                  "name": "Controller",
+                  "source_files": "MKGatewaySevenProTTD/Classes/Functions/FilterPages/UploadOptionV2Page/Controller/**",
+                  "dependencies": {
+                    "MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionV2Page/Model": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/DuplicateDataFilterPage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/DataUploadIntervalPage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByMacPage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByAdvNamePage": [],
+                    "MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataV2Page": []
+                  }
                 },
                 {
-                  "name": "View",
-                  "source_files": "MKGatewaySevenProTTD/Classes/Functions/FilterPages/UploadOptionPage/View/**"
+                  "name": "Model",
+                  "source_files": "MKGatewaySevenProTTD/Classes/Functions/FilterPages/UploadOptionV2Page/Model/**"
                 }
               ]
             }
@@ -775,19 +834,515 @@
               ]
             },
             {
-              "name": "BXPButtonPage",
+              "name": "BXPBCRPages",
               "subspecs": [
                 {
-                  "name": "Controller",
-                  "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPButtonPage/Controller/**",
-                  "dependencies": {
-                    "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage/View": [],
-                    "MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage": []
-                  }
+                  "name": "BXPButtonCRPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRRemoteReminderPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAccDataPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAdvParamsPage": []
+                      }
+                    }
+                  ]
                 },
                 {
-                  "name": "View",
-                  "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPButtonPage/View/**"
+                  "name": "BXPButtonCRRemoteReminderPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRRemoteReminderPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRRemoteReminderPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRRemoteReminderPage/Model/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPButtonCRAccDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAccDataPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAccDataPage/View": []
+                      }
+                    },
+                    {
+                      "name": "View",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAccDataPage/View/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPButtonCRAdvParamsPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAdvParamsPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAdvParamsPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAdvParamsPage/Model/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPButtonCREventAlarmPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/View": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "View",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/View/**"
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/Model/**"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "BXPBDPages",
+              "subspecs": [
+                {
+                  "name": "BXPButtonPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBDPages/BXPButtonPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonPage/View": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonRemoteReminderPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAccDataPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAdvParamsPage": []
+                      }
+                    },
+                    {
+                      "name": "View",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBDPages/BXPButtonPage/View/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPButtonRemoteReminderPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBDPages/BXPButtonRemoteReminderPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonRemoteReminderPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBDPages/BXPButtonRemoteReminderPage/Model/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPButtonAccDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBDPages/BXPButtonAccDataPage/Controller/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPButtonAdvParamsPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBDPages/BXPButtonAdvParamsPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAdvParamsPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPBDPages/BXPButtonAdvParamsPage/Model/**"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "BXPCPages",
+              "subspecs": [
+                {
+                  "name": "BXPCAccDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPCPages/BXPCAccDataPage/Controller/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPCAdvParamsPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPCPages/BXPCAdvParamsPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAdvParamsPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPCPages/BXPCAdvParamsPage/Model/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPCPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPCPages/BXPCPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCRealTimeTHDataPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCHistoricalTHDataPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAccDataPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCTHDataSampleRatePage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAdvParamsPage": []
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPCHistoricalTHDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPCPages/BXPCHistoricalTHDataPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCHistoricalTHDataPage/View": []
+                      }
+                    },
+                    {
+                      "name": "View",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPCPages/BXPCHistoricalTHDataPage/View/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPCRealTimeTHDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPCPages/BXPCRealTimeTHDataPage/Controller/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPCTHDataSampleRatePage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPCPages/BXPCTHDataSampleRatePage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCTHDataSampleRatePage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPCPages/BXPCTHDataSampleRatePage/Model/**"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "BXPDPages",
+              "subspecs": [
+                {
+                  "name": "BXPDPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPDPages/BXPDPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccDataPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccParamsPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAdvParamsPage": []
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPDAccDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPDPages/BXPDAccDataPage/Controller/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPDAccParamsPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPDPages/BXPDAccParamsPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccParamsPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPDPages/BXPDAccParamsPage/Model/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPDAdvParamsPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPDPages/BXPDAdvParamsPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAdvParamsPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPDPages/BXPDAdvParamsPage/Model/**"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "BXPSPages",
+              "subspecs": [
+                {
+                  "name": "BXPSAccDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSAccDataPage/Controller/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPSAdvParamsPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/Model": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/View": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/Model/**"
+                    },
+                    {
+                      "name": "View",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/View/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPSHallCountPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSHallCountPage/Controller/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPSPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRealTimeTHDataPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHistoricalTHDataPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAccDataPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSTHDataSampleRatePage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHallCountPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRemoteReminderPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage": []
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPSHistoricalTHDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSHistoricalTHDataPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHistoricalTHDataPage/View": []
+                      }
+                    },
+                    {
+                      "name": "View",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSHistoricalTHDataPage/View/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPSRealTimeTHDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSRealTimeTHDataPage/Controller/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPSTHDataSampleRatePage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSTHDataSampleRatePage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSTHDataSampleRatePage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSTHDataSampleRatePage/Model/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPSRemoteReminderPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSRemoteReminderPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRemoteReminderPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPSPages/BXPSRemoteReminderPage/Model/**"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "BXPTPages",
+              "subspecs": [
+                {
+                  "name": "BXPTAccDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPTPages/BXPTAccDataPage/Controller/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPTAccParamsPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPTPages/BXPTAccParamsPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccParamsPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPTPages/BXPTAccParamsPage/Model/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPTAdvParamsPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPTPages/BXPTAdvParamsPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAdvParamsPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPTPages/BXPTAdvParamsPage/Model/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPTMotionEventPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPTPages/BXPTMotionEventPage/Controller/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPTPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPTPages/BXPTPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccDataPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccParamsPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAdvParamsPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTMotionEventPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTRemoteReminderPage": []
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "BXPTRemoteReminderPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPTPages/BXPTRemoteReminderPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTRemoteReminderPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/BXPTPages/BXPTRemoteReminderPage/Model/**"
+                    }
+                  ]
                 }
               ]
             },
@@ -799,13 +1354,91 @@
                   "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/ManageBleDevicesPage/Controller/**",
                   "dependencies": {
                     "MKGatewaySevenProTTD/Functions/ManageBleModules/ManageBleDevicesPage/View": [],
-                    "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage": [],
+                    "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonPage": [],
+                    "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRPage": [],
+                    "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCPage": [],
+                    "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDPage": [],
+                    "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTPage": [],
+                    "MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSPage": [],
+                    "MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages": [],
+                    "MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages": [],
                     "MKGatewaySevenProTTD/Functions/ManageBleModules/NormalConnectedPage": []
                   }
                 },
                 {
                   "name": "View",
                   "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/ManageBleDevicesPage/View/**"
+                }
+              ]
+            },
+            {
+              "name": "MKTofPages",
+              "subspecs": [
+                {
+                  "name": "TofAccDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/MKTofPages/TofAccDataPage/Controller/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "TofAdvParamsPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/MKTofPages/TofAdvParamsPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAdvParamsPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/MKTofPages/TofAdvParamsPage/Model/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "TofPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/MKTofPages/TofPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAdvParamsPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorDataPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorParamsPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAccDataPage": []
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "TofSensorDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/MKTofPages/TofSensorDataPage/Controller/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "TofSensorParamsPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/MKTofPages/TofSensorParamsPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorParamsPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/MKTofPages/TofSensorParamsPage/Model/**"
+                    }
+                  ]
                 }
               ]
             },
@@ -822,6 +1455,67 @@
                 {
                   "name": "View",
                   "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/NormalConnectedPage/View/**"
+                }
+              ]
+            },
+            {
+              "name": "PirPages",
+              "subspecs": [
+                {
+                  "name": "PirAdvParamsPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/PirPages/PirAdvParamsPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirAdvParamsPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/PirPages/PirAdvParamsPage/Model/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "PirPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/PirPages/PirPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirAdvParamsPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorDataPage": [],
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorParamsPage": []
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "PirSensorDataPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/PirPages/PirSensorDataPage/Controller/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "PirSensorParamsPage",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/PirPages/PirSensorParamsPage/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorParamsPage/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/ManageBleModules/PirPages/PirSensorParamsPage/Model/**"
+                    }
+                  ]
                 }
               ]
             }
@@ -968,6 +1662,22 @@
                     {
                       "name": "Model",
                       "source_files": "MKGatewaySevenProTTD/Classes/Functions/SettingPages/NormalSettings/AdvBeaconPage/Model/**"
+                    }
+                  ]
+                },
+                {
+                  "name": "AdvBeaconV2Page",
+                  "subspecs": [
+                    {
+                      "name": "Controller",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/SettingPages/NormalSettings/AdvBeaconV2Page/Controller/**",
+                      "dependencies": {
+                        "MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconV2Page/Model": []
+                      }
+                    },
+                    {
+                      "name": "Model",
+                      "source_files": "MKGatewaySevenProTTD/Classes/Functions/SettingPages/NormalSettings/AdvBeaconV2Page/Model/**"
                     }
                   ]
                 },

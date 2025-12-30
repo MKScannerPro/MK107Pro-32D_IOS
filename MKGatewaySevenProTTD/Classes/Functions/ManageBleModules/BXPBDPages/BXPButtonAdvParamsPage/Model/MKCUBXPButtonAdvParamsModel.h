@@ -1,6 +1,6 @@
 //
-//  MKCSBXPButtonAdvParamsModel.h
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonAdvParamsModel.h
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/1/21.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKCSBXPButtonAdvParamsModel : NSObject
+@interface MKCUBXPButtonAdvParamsModel : NSObject
 
 @property (nonatomic, strong)NSMutableArray *dataList;
 

@@ -1,20 +1,20 @@
 //
-//  MKCSButtonDFUV2Model.m
-//  MKGatewayMiniTwo_Example
+//  MKCUButtonDFUV2Model.m
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/6/20.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSButtonDFUV2Model.h"
+#import "MKCUButtonDFUV2Model.h"
 
 #import "MKMacroDefines.h"
 
-#import "MKCSDeviceModeManager.h"
+#import "MKCUDeviceModeManager.h"
 
-#import "MKCSMQTTInterface.h"
+#import "MKCUMQTTInterface.h"
 
-@interface MKCSButtonDFUV2Model ()
+@interface MKCUButtonDFUV2Model ()
 
 @property (nonatomic, strong)dispatch_queue_t readQueue;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation MKCSButtonDFUV2Model
+@implementation MKCUButtonDFUV2Model
 
 - (void)configDataWithSucBlock:(void (^)(void))sucBlock failedBlock:(void (^)(NSError *error))failedBlock {
     dispatch_async(self.readQueue, ^{
@@ -49,7 +49,7 @@
     if (self.type == 7 || self.type == 8) {
         password = @"MOKOMOKO";
     }
-    [MKCSMQTTInterface cs_startBXPDfuWithBeaconType:self.type firmwareUrl:self.firmwareUrl dataUrl:self.dataUrl dfuList:@[@{@"mac":self.bleMac,@"password":password}] macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_startBXPDfuWithBeaconType:self.type firmwareUrl:self.firmwareUrl dataUrl:self.dataUrl dfuList:@[@{@"mac":self.bleMac,@"password":password}] macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         success = YES;
         dispatch_semaphore_signal(self.semaphore);
     } failedBlock:^(NSError * _Nonnull error) {

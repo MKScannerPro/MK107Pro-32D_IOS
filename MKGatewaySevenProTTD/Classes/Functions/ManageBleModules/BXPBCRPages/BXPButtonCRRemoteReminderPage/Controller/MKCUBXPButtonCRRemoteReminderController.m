@@ -1,12 +1,12 @@
 //
-//  MKCSBXPButtonCRRemoteReminderController.m
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonCRRemoteReminderController.m
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/1/20.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSBXPButtonCRRemoteReminderController.h"
+#import "MKCUBXPButtonCRRemoteReminderController.h"
 
 #import "Masonry.h"
 
@@ -20,18 +20,18 @@
 #import "MKTableSectionLineHeader.h"
 #import "MKTextFieldCell.h"
 
-#import "MKCSDeviceModeManager.h"
+#import "MKCUDeviceModeManager.h"
 
-#import "MKCSMQTTInterface.h"
+#import "MKCUMQTTInterface.h"
 
-#import "MKCSBXPButtonCRRemoteReminderModel.h"
+#import "MKCUBXPButtonCRRemoteReminderModel.h"
 
-#import "MKCSRemoteReminderCell.h"
+#import "MKCURemoteReminderCell.h"
 
-@interface MKCSBXPButtonCRRemoteReminderController ()<UITableViewDelegate,
+@interface MKCUBXPButtonCRRemoteReminderController ()<UITableViewDelegate,
 UITableViewDataSource,
 MKTextFieldCellDelegate,
-MKCSRemoteReminderCellDelegate>
+MKCURemoteReminderCellDelegate>
 
 @property (nonatomic, strong)MKBaseTableView *tableView;
 
@@ -49,14 +49,14 @@ MKCSRemoteReminderCellDelegate>
 
 @property (nonatomic, strong)NSMutableArray *headerList;
 
-@property (nonatomic, strong)MKCSBXPButtonCRRemoteReminderModel *dataModel;
+@property (nonatomic, strong)MKCUBXPButtonCRRemoteReminderModel *dataModel;
 
 @end
 
-@implementation MKCSBXPButtonCRRemoteReminderController
+@implementation MKCUBXPButtonCRRemoteReminderController
 
 - (void)dealloc {
-    NSLog(@"MKCSBXPButtonCRRemoteReminderController销毁");
+    NSLog(@"MKCUBXPButtonCRRemoteReminderController销毁");
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -98,7 +98,7 @@ MKCSRemoteReminderCellDelegate>
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         //LED notification
-        MKCSRemoteReminderCell *cell = [MKCSRemoteReminderCell initCellWithTableView:tableView];
+        MKCURemoteReminderCell *cell = [MKCURemoteReminderCell initCellWithTableView:tableView];
         cell.dataModel = self.section0List[indexPath.row];
         cell.delegate = self;
         return cell;
@@ -111,7 +111,7 @@ MKCSRemoteReminderCellDelegate>
     }
     if (indexPath.section == 2) {
         //Buzzer notification
-        MKCSRemoteReminderCell *cell = [MKCSRemoteReminderCell initCellWithTableView:tableView];
+        MKCURemoteReminderCell *cell = [MKCURemoteReminderCell initCellWithTableView:tableView];
         cell.dataModel = self.section2List[indexPath.row];
         cell.delegate = self;
         return cell;
@@ -124,7 +124,7 @@ MKCSRemoteReminderCellDelegate>
     }
     if (indexPath.section == 4) {
         //Vibration notification
-        MKCSRemoteReminderCell *cell = [MKCSRemoteReminderCell initCellWithTableView:tableView];
+        MKCURemoteReminderCell *cell = [MKCURemoteReminderCell initCellWithTableView:tableView];
         cell.dataModel = self.section4List[indexPath.row];
         cell.delegate = self;
         return cell;
@@ -184,7 +184,7 @@ MKCSRemoteReminderCellDelegate>
     }
 }
 
-#pragma mark - MKCSRemoteReminderCellDelegate
+#pragma mark - MKCURemoteReminderCellDelegate
 - (void)bxd_remindButtonPressed:(NSInteger)index {
     if (index == 0) {
         [self reminderLED];
@@ -243,7 +243,7 @@ MKCSRemoteReminderCellDelegate>
     }
     [[MKHudManager share] showHUDWithTitle:@"Config..." inView:self.view isPenetration:NO];
     [[MKHudManager share] showHUDWithTitle:@"Waiting..." inView:self.view isPenetration:NO];
-    [MKCSMQTTInterface cs_bxpBtnCRLedRemoteReminderWithBleMac:self.bleMac blinkingTime:[self.dataModel.blinkingTime integerValue] blinkingInterval:[self.dataModel.blinkingInterval integerValue] macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_bxpBtnCRLedRemoteReminderWithBleMac:self.bleMac blinkingTime:[self.dataModel.blinkingTime integerValue] blinkingInterval:[self.dataModel.blinkingInterval integerValue] macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         [[MKHudManager share] hide];
         [self.view showCentralToast:@"Success"];
     } failedBlock:^(NSError * _Nonnull error) {
@@ -263,7 +263,7 @@ MKCSRemoteReminderCellDelegate>
     }
     [[MKHudManager share] showHUDWithTitle:@"Config..." inView:self.view isPenetration:NO];
     [[MKHudManager share] showHUDWithTitle:@"Waiting..." inView:self.view isPenetration:NO];
-    [MKCSMQTTInterface cs_bxpBtnCRBuzzerRemoteReminderWithBleMac:self.bleMac ringTime:[self.dataModel.ringingTime integerValue] ringInterval:[self.dataModel.ringingInterval integerValue] macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_bxpBtnCRBuzzerRemoteReminderWithBleMac:self.bleMac ringTime:[self.dataModel.ringingTime integerValue] ringInterval:[self.dataModel.ringingInterval integerValue] macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         [[MKHudManager share] hide];
         [self.view showCentralToast:@"Success"];
     } failedBlock:^(NSError * _Nonnull error) {
@@ -283,7 +283,7 @@ MKCSRemoteReminderCellDelegate>
     }
     [[MKHudManager share] showHUDWithTitle:@"Config..." inView:self.view isPenetration:NO];
     [[MKHudManager share] showHUDWithTitle:@"Waiting..." inView:self.view isPenetration:NO];
-    [MKCSMQTTInterface cs_bxpBtnCRVibratingRemoteReminderWithBleMac:self.bleMac vibratingTime:[self.dataModel.vibrationTime integerValue] vibratingInterval:[self.dataModel.vibrationInterval integerValue] macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_bxpBtnCRVibratingRemoteReminderWithBleMac:self.bleMac vibratingTime:[self.dataModel.vibrationTime integerValue] vibratingInterval:[self.dataModel.vibrationInterval integerValue] macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         [[MKHudManager share] hide];
         [self.view showCentralToast:@"Success"];
     } failedBlock:^(NSError * _Nonnull error) {
@@ -310,7 +310,7 @@ MKCSRemoteReminderCellDelegate>
 }
 
 - (void)loadSection0Datas {
-    MKCSRemoteReminderCellModel *cellModel = [[MKCSRemoteReminderCellModel alloc] init];
+    MKCURemoteReminderCellModel *cellModel = [[MKCURemoteReminderCellModel alloc] init];
     cellModel.msg = @"LED notification";
     cellModel.index = 0;
     [self.section0List addObject:cellModel];
@@ -339,7 +339,7 @@ MKCSRemoteReminderCellDelegate>
 }
 
 - (void)loadSection2Datas {
-    MKCSRemoteReminderCellModel *cellModel = [[MKCSRemoteReminderCellModel alloc] init];
+    MKCURemoteReminderCellModel *cellModel = [[MKCURemoteReminderCellModel alloc] init];
     cellModel.msg = @"Buzzer notification";
     cellModel.index = 1;
     [self.section2List addObject:cellModel];
@@ -368,8 +368,8 @@ MKCSRemoteReminderCellDelegate>
 }
 
 - (void)loadSection4Datas {
-    MKCSRemoteReminderCellModel *cellModel = [[MKCSRemoteReminderCellModel alloc] init];
-    cellModel.msg = @"Buzzer notification";
+    MKCURemoteReminderCellModel *cellModel = [[MKCURemoteReminderCellModel alloc] init];
+    cellModel.msg = @"Vibration notification";
     cellModel.index = 2;
     [self.section4List addObject:cellModel];
 }
@@ -470,9 +470,9 @@ MKCSRemoteReminderCellDelegate>
     return _headerList;
 }
 
-- (MKCSBXPButtonCRRemoteReminderModel *)dataModel {
+- (MKCUBXPButtonCRRemoteReminderModel *)dataModel {
     if (!_dataModel) {
-        _dataModel = [[MKCSBXPButtonCRRemoteReminderModel alloc] init];
+        _dataModel = [[MKCUBXPButtonCRRemoteReminderModel alloc] init];
     }
     return _dataModel;
 }

@@ -20,8 +20,8 @@ NSString *const MKCUReceiveDeviceOnlineNotification = @"MKCUReceiveDeviceOnlineN
 NSString *const MKCUReceiveDeviceNetStateNotification = @"MKCUReceiveDeviceNetStateNotification";
 NSString *const MKCUReceiveDeviceOTAResultNotification = @"MKCUReceiveDeviceOTAResultNotification";
 NSString *const MKCUReceiveDeviceNpcOTAResultNotification = @"MKCUReceiveDeviceNpcOTAResultNotification";
-NSString *const MKCUReceiveDeviceResetByButtonNotification = @"MKCUReceiveDeviceResetByButtonNotification";
 NSString *const MKCUReceiveDeviceUpdateEapCertsResultNotification = @"MKCUReceiveDeviceUpdateEapCertsResultNotification";
+NSString *const MKCUReceiveDeviceResetByButtonNotification = @"MKCUReceiveDeviceResetByButtonNotification";
 NSString *const MKCUReceiveDeviceUpdateMqttCertsResultNotification = @"MKCUReceiveDeviceUpdateMqttCertsResultNotification";
 
 NSString *const MKCUReceiveDeviceDatasNotification = @"MKCUReceiveDeviceDatasNotification";
@@ -32,8 +32,32 @@ NSString *const MKCUReceiveGatewayConnectedDeviceDatasNotification = @"MKCURecei
 NSString *const MKCUReceiveBxpButtonDfuProgressNotification = @"MKCUReceiveBxpButtonDfuProgressNotification";
 NSString *const MKCUReceiveBxpButtonDfuResultNotification = @"MKCUReceiveBxpButtonDfuResultNotification";
 
+NSString *const MKCUReceiveBxpDfuFailedNotification = @"MKCUReceiveBxpDfuFailedNotification";
+
 NSString *const MKCUReceiveDeviceOfflineNotification = @"MKCUReceiveDeviceOfflineNotification";
 
+
+NSString *const MKCUReceiveBXPBtnAccDataNotification = @"MKCUReceiveBXPBtnAccDataNotification";
+
+NSString *const MKCUReceiveBXPBtnCRAccDataNotification = @"MKCUReceiveBXPBtnCRAccDataNotification";
+NSString *const MKCUReceiveBXPBtnCRAlarmEventDataNotification = @"MKCUReceiveBXPBtnCRAlarmEventDataNotification";
+
+NSString *const MKCUReceiveBXPCRealTimeHTDataNotification = @"MKCUReceiveBXPCRealTimeHTDataNotification";
+NSString *const MKCUReceiveBXPCAccDataNotification = @"MKCUReceiveBXPCAccDataNotification";
+NSString *const MKCUReceiveBXPCHistoricalHTDataNotification = @"MKCUReceiveBXPCHistoricalHTDataNotification";
+
+NSString *const MKCUReceiveBXPDAccDataNotification = @"MKCUReceiveBXPDAccDataNotification";
+
+NSString *const MKCUReceiveBXPTAccDataNotification = @"MKCUReceiveBXPTAccDataNotification";
+
+NSString *const MKCUReceiveBXPSRealTimeHTDataNotification = @"MKCUReceiveBXPSRealTimeHTDataNotification";
+NSString *const MKCUReceiveBXPSAccDataNotification = @"MKCUReceiveBXPSAccDataNotification";
+NSString *const MKCUReceiveBXPSHistoricalHTDataNotification = @"MKCUReceiveBXPSHistoricalHTDataNotification";
+
+NSString *const MKCUReceiveMKPirSensorDataNotification = @"MKCUReceiveMKPirSensorDataNotification";
+
+NSString *const MKCUReceiveMKTofAccDataNotification = @"MKCUReceiveMKTofAccDataNotification";
+NSString *const MKCUReceiveMKTofDistanceDataNotification = @"MKCUReceiveMKTofDistanceDataNotification";
 
 static MKCUMQTTDataManager *manager = nil;
 static dispatch_once_t onceToken;
@@ -142,16 +166,44 @@ static dispatch_once_t onceToken;
                                                           userInfo:data];
         return;
     }
-    if (msgID == 3203) {
-        //BXP-Button升级进度
+    if (msgID == 3117) {
+        //BXP-B-D 三轴数据通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBXPBtnAccDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    if (msgID == 3166) {
+        //BXP-B-CR 三轴数据通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBXPBtnCRAccDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    if (msgID == 3173) {
+        //BXP-B-CR 触发记录数据通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBXPBtnCRAlarmEventDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    if (msgID == 3203 || msgID == 3206) {
+        //BXP-Button升级进度    3206是MKCU3 V2
         [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBxpButtonDfuProgressNotification
                                                             object:nil
                                                           userInfo:data];
         return;
     }
-    if (msgID == 3204) {
-        //BXP-Button升级结果
+    if (msgID == 3204 || msgID == 3207) {
+        //BXP-Button升级结果 3207是MKCU3 V2
         [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBxpButtonDfuResultNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    if (msgID == 3208) {
+        //MKCU3 V2 dfu升级完成
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBxpDfuFailedNotification
                                                             object:nil
                                                           userInfo:data];
         return;
@@ -166,6 +218,87 @@ static dispatch_once_t onceToken;
     if (msgID == 3311) {
         //网关接收到已连接的蓝牙设备的数据
         [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveGatewayConnectedDeviceDatasNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    if (msgID == 3358) {
+        //BXP-C 实时温湿度数据通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBXPCRealTimeHTDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    if (msgID == 3361) {
+        //BXP-C 三轴数据通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBXPCAccDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    
+    if (msgID == 3364) {
+        //BXP-C 历史温湿度数据通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBXPCHistoricalHTDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    
+    if (msgID == 3416) {
+        //BXP-D 三轴数据通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBXPDAccDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    if (msgID == 3468) {
+        //BXP-T 三轴数据通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBXPTAccDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    if (msgID == 3508) {
+        //BXP-S 实时温湿度数据通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBXPSRealTimeHTDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    if (msgID == 3511) {
+        //BXP-S 三轴数据通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBXPSAccDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    
+    if (msgID == 3514) {
+        //BXP-S 历史温湿度数据通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveBXPSHistoricalHTDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    
+    if (msgID == 3558) {
+        //MK Pir传感器数据
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveMKPirSensorDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    if (msgID == 3608) {
+        //MK Tof 三轴数据通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveMKTofAccDataNotification
+                                                            object:nil
+                                                          userInfo:data];
+        return;
+    }
+    if (msgID == 3625) {
+        //MK Tof 距离通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:MKCUReceiveMKTofDistanceDataNotification
                                                             object:nil
                                                           userInfo:data];
         return;

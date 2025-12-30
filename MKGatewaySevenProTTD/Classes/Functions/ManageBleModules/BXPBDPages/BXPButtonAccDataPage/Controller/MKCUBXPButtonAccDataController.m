@@ -1,12 +1,12 @@
 //
-//  MKCSBXPButtonAccDataController.m
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonAccDataController.m
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/1/20.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSBXPButtonAccDataController.h"
+#import "MKCUBXPButtonAccDataController.h"
 
 #import <MessageUI/MessageUI.h>
 #import <sys/utsname.h>
@@ -28,18 +28,18 @@
 
 #import "MKBLEBaseSDKAdopter.h"
 
-#import "MKCSMQTTDataManager.h"
-#import "MKCSMQTTInterface.h"
+#import "MKCUMQTTDataManager.h"
+#import "MKCUMQTTInterface.h"
 
-#import "MKCSDeviceModeManager.h"
-#import "MKCSDeviceModel.h"
+#import "MKCUDeviceModeManager.h"
+#import "MKCUDeviceModel.h"
 
-#import "MKCSBXPButtonAccHeaderView.h"
+#import "MKCUBXPButtonAccHeaderView.h"
 
-@interface MKCSBXPButtonAccDataController ()<MFMailComposeViewControllerDelegate,
-MKCSBXPButtonAccHeaderViewDelegate>
+@interface MKCUBXPButtonAccDataController ()<MFMailComposeViewControllerDelegate,
+MKCUBXPButtonAccHeaderViewDelegate>
 
-@property (nonatomic, strong)MKCSBXPButtonAccHeaderView *headerView;
+@property (nonatomic, strong)MKCUBXPButtonAccHeaderView *headerView;
 
 @property (nonatomic, strong)UITextView *textView;
 
@@ -47,10 +47,10 @@ MKCSBXPButtonAccHeaderViewDelegate>
 
 @end
 
-@implementation MKCSBXPButtonAccDataController
+@implementation MKCUBXPButtonAccDataController
 
 - (void)dealloc {
-    NSLog(@"MKCSBXPButtonAccDataController销毁");
+    NSLog(@"MKCUBXPButtonAccDataController销毁");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -77,17 +77,17 @@ MKCSBXPButtonAccHeaderViewDelegate>
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - MKCSBXPButtonAccHeaderViewDelegate
-- (void)cs_bxpButtonAccHeaderView_syncButtonPressed:(BOOL)isOn {
+#pragma mark - MKCUBXPButtonAccHeaderViewDelegate
+- (void)cu_bxpButtonAccHeaderView_syncButtonPressed:(BOOL)isOn {
     [[MKHudManager share] showHUDWithTitle:@"Config..." inView:self.view isPenetration:NO];
-    [MKCSMQTTInterface cs_bxpBtnNotifyAccDataWithBleMac:self.bleMac notify:isOn macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_bxpBtnNotifyAccDataWithBleMac:self.bleMac notify:isOn macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         [[MKHudManager share] hide];
         [self.view showCentralToast:@"Success"];
         [self.headerView updateSyncStatus:isOn];
         if (isOn) {
             [[NSNotificationCenter defaultCenter] addObserver:self
                                                      selector:@selector(receiveAccDatas:)
-                                                         name:MKCSReceiveBXPBtnAccDataNotification
+                                                         name:MKCUReceiveBXPBtnAccDataNotification
                                                        object:nil];
         }else {
             [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -98,7 +98,7 @@ MKCSBXPButtonAccHeaderViewDelegate>
     }];
 }
 
-- (void)cs_bxpButtonAccHeaderView_exportButtonPressed {
+- (void)cu_bxpButtonAccHeaderView_exportButtonPressed {
     if (![MFMailComposeViewController canSendMail]) {
         //如果是未绑定有效的邮箱，则跳转到系统自带的邮箱去处理
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"MESSAGE://"]
@@ -133,7 +133,7 @@ MKCSBXPButtonAccHeaderViewDelegate>
 #pragma mark - Notes
 - (void)receiveAccDatas:(NSNotification *)note {
     NSDictionary *user = note.userInfo;
-    if (!ValidDict(user) || !ValidStr(user[@"device_info"][@"mac"]) || ![[MKCSDeviceModeManager shared].macAddress isEqualToString:user[@"device_info"][@"mac"]]) {
+    if (!ValidDict(user) || !ValidStr(user[@"device_info"][@"mac"]) || ![[MKCUDeviceModeManager shared].macAddress isEqualToString:user[@"device_info"][@"mac"]]) {
         return;
     }
     NSDictionary *dataDic = user[@"data"];
@@ -169,9 +169,9 @@ MKCSBXPButtonAccHeaderViewDelegate>
 }
 
 #pragma mark - getter
-- (MKCSBXPButtonAccHeaderView *)headerView {
+- (MKCUBXPButtonAccHeaderView *)headerView {
     if (!_headerView) {
-        _headerView = [[MKCSBXPButtonAccHeaderView alloc] init];
+        _headerView = [[MKCUBXPButtonAccHeaderView alloc] init];
         _headerView.delegate = self;
     }
     return _headerView;

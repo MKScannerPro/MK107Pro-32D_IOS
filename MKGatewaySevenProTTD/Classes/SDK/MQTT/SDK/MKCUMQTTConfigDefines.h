@@ -49,6 +49,50 @@ typedef NS_ENUM(NSInteger, mk_cu_PHYMode) {
     mk_bv_PHYMode_CodedBLE5,                //Coded PHY(BLE 5)
 };
 
+typedef NS_ENUM(NSInteger, mk_cu_triggerEventType) {
+    mk_cu_triggerEventType_singlePress,
+    mk_cu_triggerEventType_DoublePress,
+    mk_cu_triggerEventType_longPress,
+};
+
+typedef NS_ENUM(NSInteger, mk_cu_threeAxisDataRate) {
+    mk_cu_threeAxisDataRate1hz,           //1hz
+    mk_cu_threeAxisDataRate10hz,          //10hz
+    mk_cu_threeAxisDataRate25hz,          //25hz
+    mk_cu_threeAxisDataRate50hz,          //50hz
+    mk_cu_threeAxisDataRate100hz          //100hz
+};
+
+typedef NS_ENUM(NSInteger, mk_cu_threeAxisDataAG) {
+    mk_cu_threeAxisDataAG0,               //±2g
+    mk_cu_threeAxisDataAG1,               //±4g
+    mk_cu_threeAxisDataAG2,               //±8g
+    mk_cu_threeAxisDataAG3                //±16g
+};
+
+typedef NS_ENUM(NSInteger, mk_cu_bxptLedColor) {
+    mk_cu_bxptLedColor_green,
+    mk_cu_bxptLedColor_blue,
+    mk_cu_bxptLedColor_red
+};
+
+typedef NS_ENUM(NSInteger, mk_cu_pirSensorParamType) {
+    mk_cu_pirSensorParamTypeLow,
+    mk_cu_pirSensorParamTypeMedium,
+    mk_cu_pirSensorParamTypeHigh,
+};
+
+typedef NS_ENUM(NSInteger, mk_cu_tofRangingMode) {
+    mk_cu_tofRangingModeShortdistance,
+    mk_cu_tofRangingModeLongdistance,
+};
+
+typedef NS_ENUM(NSInteger, mk_cu_bxpcrAlarmEventType) {
+    mk_cu_bxpcrAlarmEventType_single,
+    mk_cu_bxpcrAlarmEventType_double,
+    mk_cu_bxpcrAlarmEventType_long
+};
+
 typedef NS_ENUM(NSInteger, mk_cu_filterByNanoBeaconAdvType) {
     mk_cu_filterByNanoBeaconAdvType_normal,
     mk_cu_filterByNanoBeaconAdvType_trigger,
@@ -248,11 +292,18 @@ typedef NS_ENUM(NSInteger, mk_cu_filterByNanoBeaconAdvType) {
 
 @protocol cu_uploadDataOptionProtocol <NSObject>
 
+/// V2版本固件
+@property (nonatomic, assign)BOOL isV2;
+
 @property (nonatomic, assign)BOOL timestamp;
 
 @property (nonatomic, assign)BOOL rawData_advertising;
 
+/// V2中无此参数
 @property (nonatomic, assign)BOOL rawData_response;
+
+/// V2中有此参数
+@property (nonatomic, assign)BOOL parsed_data;
 
 @end
 
@@ -292,5 +343,15 @@ typedef NS_ENUM(NSInteger, mk_cu_filterByNanoBeaconAdvType) {
 @property (nonatomic, assign)NSInteger txPower;
 
 @property (nonatomic, assign)NSInteger rssi1m;
+
+@end
+
+
+
+@protocol cu_advertiseBeaconV2Protocol <cu_advertiseBeaconProtocol>
+
+@property (nonatomic, assign)NSInteger rssi1M;
+
+@property (nonatomic, assign)BOOL connectable;
 
 @end

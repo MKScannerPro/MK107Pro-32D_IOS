@@ -1,12 +1,12 @@
 //
-//  MKCSBXPButtonAdvParamsController.m
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonAdvParamsController.m
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/1/21.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSBXPButtonAdvParamsController.h"
+#import "MKCUBXPButtonAdvParamsController.h"
 
 #import "Masonry.h"
 
@@ -22,22 +22,22 @@
 #import "MKNormalTextCell.h"
 #import "MKTableSectionLineHeader.h"
 
-#import "MKCSAdvNormalCell.h"
-#import "MKCSAdvTriggerCell.h"
-#import "MKCSAdvTriggerTwoStateCell.h"
+#import "MKCUAdvNormalCell.h"
+#import "MKCUAdvTriggerCell.h"
+#import "MKCUAdvTriggerTwoStateCell.h"
 
-#import "MKCSDeviceModeManager.h"
-#import "MKCSDeviceModel.h"
+#import "MKCUDeviceModeManager.h"
+#import "MKCUDeviceModel.h"
 
-#import "MKCSMQTTInterface.h"
+#import "MKCUMQTTInterface.h"
 
-#import "MKCSBXPButtonAdvParamsModel.h"
+#import "MKCUBXPButtonAdvParamsModel.h"
 
-@interface MKCSBXPButtonAdvParamsController ()<UITableViewDelegate,
+@interface MKCUBXPButtonAdvParamsController ()<UITableViewDelegate,
 UITableViewDataSource,
-MKCSAdvNormalCellDelegate,
-MKCSAdvTriggerCellDelegate,
-MKCSAdvTriggerTwoStateCellDelegate>
+MKCUAdvNormalCellDelegate,
+MKCUAdvTriggerCellDelegate,
+MKCUAdvTriggerTwoStateCellDelegate>
 
 @property (nonatomic, strong)MKBaseTableView *tableView;
 
@@ -51,14 +51,14 @@ MKCSAdvTriggerTwoStateCellDelegate>
 
 @property (nonatomic, strong)NSMutableArray *headerList;
 
-@property (nonatomic, strong)MKCSBXPButtonAdvParamsModel *dataModel;
+@property (nonatomic, strong)MKCUBXPButtonAdvParamsModel *dataModel;
 
 @end
 
-@implementation MKCSBXPButtonAdvParamsController
+@implementation MKCUBXPButtonAdvParamsController
 
 - (void)dealloc {
-    NSLog(@"MKCSBXPButtonAdvParamsController销毁");
+    NSLog(@"MKCUBXPButtonAdvParamsController销毁");
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -114,8 +114,8 @@ MKCSAdvTriggerTwoStateCellDelegate>
     return [self loadTableCell:indexPath];
 }
 
-#pragma mark - MKCSAdvNormalCellDelegate
-- (void)cs_advNormalCell_setPressed:(NSInteger)index
+#pragma mark - MKCUAdvNormalCellDelegate
+- (void)cu_advNormalCell_setPressed:(NSInteger)index
                            interval:(NSString *)interval
                             txPower:(NSInteger)txPower {
     if (!ValidStr(interval) || [interval integerValue] < 1 || [interval integerValue] > 100) {
@@ -129,7 +129,7 @@ MKCSAdvTriggerTwoStateCellDelegate>
         @"advInterval":@([interval integerValue] * 20),
         @"txPower":@(txPower)
     };
-    [MKCSMQTTInterface cs_bxpBtnConfigAdvParamsWithParams:param bleMac:self.bleMac macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_bxpBtnConfigAdvParamsWithParams:param bleMac:self.bleMac macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         [[MKHudManager share] hide];
         [self.view showCentralToast:@"Success"];
     } failedBlock:^(NSError * _Nonnull error) {
@@ -138,8 +138,8 @@ MKCSAdvTriggerTwoStateCellDelegate>
     }];
 }
 
-#pragma mark - MKCSAdvTriggerCellDelegate
-- (void)cs_advTriggerCell_setPressed:(NSInteger)index
+#pragma mark - MKCUAdvTriggerCellDelegate
+- (void)cu_advTriggerCell_setPressed:(NSInteger)index
                             interval:(NSString *)interval
                              txPower:(NSInteger)txPower {
     if (!ValidStr(interval) || [interval integerValue] < 1 || [interval integerValue] > 100) {
@@ -153,7 +153,7 @@ MKCSAdvTriggerTwoStateCellDelegate>
         @"advInterval":@([interval integerValue] * 20),
         @"txPower":@(txPower)
     };
-    [MKCSMQTTInterface cs_bxpBtnConfigAdvParamsWithParams:param bleMac:self.bleMac macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_bxpBtnConfigAdvParamsWithParams:param bleMac:self.bleMac macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         [[MKHudManager share] hide];
         [self.view showCentralToast:@"Success"];
     } failedBlock:^(NSError * _Nonnull error) {
@@ -162,8 +162,8 @@ MKCSAdvTriggerTwoStateCellDelegate>
     }];
 }
 
-#pragma mark - MKCSAdvTriggerTwoStateCellDelegate
-- (void)cs_advNormalCell_setPressed:(NSInteger)index
+#pragma mark - MKCUAdvTriggerTwoStateCellDelegate
+- (void)cu_advNormalCell_setPressed:(NSInteger)index
                      beforeInterval:(NSString *)beforeInterval
                       beforeTxPower:(NSInteger)beforeTxPower
                       afterInterval:(NSString *)afterInterval
@@ -185,7 +185,7 @@ MKCSAdvTriggerTwoStateCellDelegate>
         @"beforeAdvInterval":@([beforeInterval integerValue] * 20),
         @"beforeTxPower":@(beforeTxPower)
     };
-    [MKCSMQTTInterface cs_bxpBtnConfigAdvParamsWithParams:param bleMac:self.bleMac macAddress:[MKCSDeviceModeManager shared].macAddress topic:[MKCSDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
+    [MKCUMQTTInterface cu_bxpBtnConfigAdvParamsWithParams:param bleMac:self.bleMac macAddress:[MKCUDeviceModeManager shared].macAddress topic:[MKCUDeviceModeManager shared].subscribedTopic sucBlock:^(id  _Nonnull returnData) {
         [[MKHudManager share] hide];
         [self.view showCentralToast:@"Success"];
     } failedBlock:^(NSError * _Nonnull error) {
@@ -219,7 +219,7 @@ MKCSAdvTriggerTwoStateCellDelegate>
         }
     }
     if (!ValidDict(advParams)) {
-        return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MKCSBXPButtonAdvParamsControllerCell"];
+        return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MKCUBXPButtonAdvParamsControllerCell"];
     }
     BOOL enable = [advParams[@"enable"] boolValue];
     NSMutableArray *dataList = self.section0List;
@@ -239,20 +239,20 @@ MKCSAdvTriggerTwoStateCellDelegate>
     NSInteger channelType = [advParams[@"channel_type"] integerValue];
     if (channelType == 0) {
         //正常广播
-        MKCSAdvNormalCell *cell = [MKCSAdvNormalCell initCellWithTableView:self.tableView];
+        MKCUAdvNormalCell *cell = [MKCUAdvNormalCell initCellWithTableView:self.tableView];
         cell.dataModel = dataList[indexPath.row];
         cell.delegate = self;
         return cell;
     }
     if (channelType == 1) {
         //触发广播
-        MKCSAdvTriggerCell *cell = [MKCSAdvTriggerCell initCellWithTableView:self.tableView];
+        MKCUAdvTriggerCell *cell = [MKCUAdvTriggerCell initCellWithTableView:self.tableView];
         cell.dataModel = dataList[indexPath.row];
         cell.delegate = self;
         return cell;
     }
     //触发前+触发后广播
-    MKCSAdvTriggerTwoStateCell *cell = [MKCSAdvTriggerTwoStateCell initCellWithTableView:self.tableView];
+    MKCUAdvTriggerTwoStateCell *cell = [MKCUAdvTriggerTwoStateCell initCellWithTableView:self.tableView];
     cell.dataModel = dataList[indexPath.row];
     cell.delegate = self;
     return cell;
@@ -271,10 +271,10 @@ MKCSAdvTriggerTwoStateCellDelegate>
     if ([obj isKindOfClass:MKNormalTextCellModel.class]) {
         return 44.f;
     }
-    if ([obj isKindOfClass:MKCSAdvNormalCellModel.class] || [obj isKindOfClass:MKCSAdvTriggerCellModel.class]) {
+    if ([obj isKindOfClass:MKCUAdvNormalCellModel.class] || [obj isKindOfClass:MKCUAdvTriggerCellModel.class]) {
         return 150.f;
     }
-    if ([obj isKindOfClass:MKCSAdvTriggerTwoStateCellModel.class]) {
+    if ([obj isKindOfClass:MKCUAdvTriggerTwoStateCellModel.class]) {
         return 240.f;
     }
     return 0.0f;
@@ -324,7 +324,7 @@ MKCSAdvTriggerTwoStateCellDelegate>
     NSInteger channelType = [advParams[@"channel_type"] integerValue];
     if (channelType == 0) {
         //正常广播
-        MKCSAdvNormalCellModel *cellModel = [[MKCSAdvNormalCellModel alloc] init];
+        MKCUAdvNormalCellModel *cellModel = [[MKCUAdvNormalCellModel alloc] init];
         cellModel.index = section;
         cellModel.msg = channelMsg;
         cellModel.advInterval = [NSString stringWithFormat:@"%ld",(long)[advParams[@"normal_adv"][@"adv_interval"] integerValue] / 20];
@@ -333,7 +333,7 @@ MKCSAdvTriggerTwoStateCellDelegate>
     }
     if (channelType == 1) {
         //触发广播
-        MKCSAdvTriggerCellModel *cellModel = [[MKCSAdvTriggerCellModel alloc] init];
+        MKCUAdvTriggerCellModel *cellModel = [[MKCUAdvTriggerCellModel alloc] init];
         cellModel.index = section;
         cellModel.msg = channelMsg;
         cellModel.advInterval = [NSString stringWithFormat:@"%ld",(long)[advParams[@"trigger_after_adv"][@"adv_interval"] integerValue] / 20];
@@ -341,7 +341,7 @@ MKCSAdvTriggerTwoStateCellDelegate>
         return cellModel;
     }
     //触发前+触发后广播
-    MKCSAdvTriggerTwoStateCellModel *cellModel = [[MKCSAdvTriggerTwoStateCellModel alloc] init];
+    MKCUAdvTriggerTwoStateCellModel *cellModel = [[MKCUAdvTriggerTwoStateCellModel alloc] init];
     cellModel.index = section;
     cellModel.msg = channelMsg;
     cellModel.beforeTriggerInterval = [NSString stringWithFormat:@"%ld",(long)[advParams[@"trigger_before_adv"][@"adv_interval"] integerValue] / 20];
@@ -438,9 +438,9 @@ MKCSAdvTriggerTwoStateCellDelegate>
     return _headerList;
 }
 
-- (MKCSBXPButtonAdvParamsModel *)dataModel {
+- (MKCUBXPButtonAdvParamsModel *)dataModel {
     if (!_dataModel) {
-        _dataModel = [[MKCSBXPButtonAdvParamsModel alloc] init];
+        _dataModel = [[MKCUBXPButtonAdvParamsModel alloc] init];
     }
     return _dataModel;
 }

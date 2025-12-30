@@ -1,16 +1,16 @@
 //
-//  MKCSBXPButtonCRAccDataController.h
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonCRAccDataController.h
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/1/20.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSBaseViewController.h"
+#import "MKCUBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKCSBXPButtonCRAccDataController : MKCSBaseViewController
+@interface MKCUBXPButtonCRAccDataController : MKCUBaseViewController
 
 @property (nonatomic, copy)NSString *bleMac;
 

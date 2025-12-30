@@ -1,6 +1,6 @@
 //
-//  MKCSBXPButtonCRRemoteReminderModel.h
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonCRRemoteReminderModel.h
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/1/20.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKCSBXPButtonCRRemoteReminderModel : NSObject
+@interface MKCUBXPButtonCRRemoteReminderModel : NSObject
 
 #pragma mark - LED notification
 @property (nonatomic, copy)NSString *blinkingTime;

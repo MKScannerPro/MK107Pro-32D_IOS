@@ -1,6 +1,6 @@
 //
-//  MKCSButtonDFUV2Model.h
-//  MKGatewayMiniTwo_Example
+//  MKCUButtonDFUV2Model.h
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/6/20.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKCSButtonDFUV2Model : NSObject
+@interface MKCUButtonDFUV2Model : NSObject
 
 @property (nonatomic, copy)NSString *bleMac;
 

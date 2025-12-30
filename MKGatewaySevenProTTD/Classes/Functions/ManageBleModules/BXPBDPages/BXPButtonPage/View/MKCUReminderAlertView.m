@@ -1,12 +1,12 @@
 //
-//  MKCSReminderAlertView.m
-//  MKGatewayMiniTwo_Example
+//  MKCUReminderAlertView.m
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2024/11/01.
 //  Copyright © 2023 lovexiaoxia. All rights reserved.
 //
 
-#import "MKCSReminderAlertView.h"
+#import "MKCUReminderAlertView.h"
 
 #import "Masonry.h"
 
@@ -20,10 +20,10 @@ static CGFloat const titleLabelOffsetY = 25.f;
 static CGFloat const buttonHeight = 45.f;
 static CGFloat const textFieldHeight = 30.f;
 
-@implementation MKCSReminderAlertViewModel
+@implementation MKCUReminderAlertViewModel
 @end
 
-@interface MKCSReminderColorButton : UIControl
+@interface MKCUReminderColorButton : UIControl
 
 @property (nonatomic, strong)UIImageView *icon;
 
@@ -31,7 +31,7 @@ static CGFloat const textFieldHeight = 30.f;
 
 @end
 
-@implementation MKCSReminderColorButton
+@implementation MKCUReminderColorButton
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -60,7 +60,7 @@ static CGFloat const textFieldHeight = 30.f;
 - (UIImageView *)icon {
     if (!_icon) {
         _icon = [[UIImageView alloc] init];
-        _icon.image = LOADICON(@"MKGatewayMiniTwo", @"MKCSReminderColorButton", @"cs_resetByButtonUnselectedIcon.png");
+        _icon.image = LOADICON(@"MKGatewaySevenProTTD", @"MKCUReminderColorButton", @"cu_resetByButtonUnselectedIcon.png");
     }
     return _icon;
 }
@@ -78,7 +78,7 @@ static CGFloat const textFieldHeight = 30.f;
 
 @end
 
-@interface MKCSReminderAlertView ()
+@interface MKCUReminderAlertView ()
 
 @property (nonatomic, strong)UIView *centerView;
 
@@ -110,15 +110,15 @@ static CGFloat const textFieldHeight = 30.f;
 
 @property (nonatomic, strong)UIView *colorView;
 
-@property (nonatomic, strong)MKCSReminderColorButton *redColor;
+@property (nonatomic, strong)MKCUReminderColorButton *redColor;
 
-@property (nonatomic, strong)MKCSReminderColorButton *blueColor;
+@property (nonatomic, strong)MKCUReminderColorButton *blueColor;
 
-@property (nonatomic, strong)MKCSReminderColorButton *greenColor;
+@property (nonatomic, strong)MKCUReminderColorButton *greenColor;
 
 @end
 
-@implementation MKCSReminderAlertView
+@implementation MKCUReminderAlertView
 
 - (instancetype)init{
     if (self = [super init]) {
@@ -142,7 +142,7 @@ static CGFloat const textFieldHeight = 30.f;
         [self.centerView addSubview:self.cancelButton];
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(dismiss)
-                                                     name:@"mk_cs_needDismissAlert"
+                                                     name:@"mk_cu_needDismissAlert"
                                                    object:nil];
     }
     return self;
@@ -286,7 +286,7 @@ static CGFloat const textFieldHeight = 30.f;
 }
 
 #pragma mark - public method
-- (void)showAlertWithModel:(MKCSReminderAlertViewModel *)dataModel
+- (void)showAlertWithModel:(MKCUReminderAlertViewModel *)dataModel
              confirmAction:(void (^)(NSString *interval, NSString *duration, NSInteger color))confirmAction {
     self.titleLabel.text = SafeStr(dataModel.title);
     self.intervalLabel.text = SafeStr(dataModel.intervalMsg);
@@ -306,9 +306,9 @@ static CGFloat const textFieldHeight = 30.f;
 }
 
 - (void)setupColorIcons {
-    self.redColor.icon.image = (self.currentColor == 0 ? LOADICON(@"MKGatewayMiniTwo", @"MKCSReminderColorButton", @"cs_resetByButtonSelectedIcon.png") : LOADICON(@"MKGatewayMiniTwo", @"MKCSReminderColorButton", @"cs_resetByButtonUnselectedIcon.png"));
-    self.blueColor.icon.image = (self.currentColor == 1 ? LOADICON(@"MKGatewayMiniTwo", @"MKCSReminderColorButton", @"cs_resetByButtonSelectedIcon.png") : LOADICON(@"MKGatewayMiniTwo", @"MKCSReminderColorButton", @"cs_resetByButtonUnselectedIcon.png"));
-    self.greenColor.icon.image = (self.currentColor == 2 ? LOADICON(@"MKGatewayMiniTwo", @"MKCSReminderColorButton", @"cs_resetByButtonSelectedIcon.png") : LOADICON(@"MKGatewayMiniTwo", @"MKCSReminderColorButton", @"cs_resetByButtonUnselectedIcon.png"));
+    self.redColor.icon.image = (self.currentColor == 0 ? LOADICON(@"MKGatewaySevenProTTD", @"MKCUReminderColorButton", @"cu_resetByButtonSelectedIcon.png") : LOADICON(@"MKGatewaySevenProTTD", @"MKCUReminderColorButton", @"cu_resetByButtonUnselectedIcon.png"));
+    self.blueColor.icon.image = (self.currentColor == 1 ? LOADICON(@"MKGatewaySevenProTTD", @"MKCUReminderColorButton", @"cu_resetByButtonSelectedIcon.png") : LOADICON(@"MKGatewaySevenProTTD", @"MKCUReminderColorButton", @"cu_resetByButtonUnselectedIcon.png"));
+    self.greenColor.icon.image = (self.currentColor == 2 ? LOADICON(@"MKGatewaySevenProTTD", @"MKCUReminderColorButton", @"cu_resetByButtonSelectedIcon.png") : LOADICON(@"MKGatewaySevenProTTD", @"MKCUReminderColorButton", @"cu_resetByButtonUnselectedIcon.png"));
 }
 
 #pragma mark - getter
@@ -341,9 +341,9 @@ static CGFloat const textFieldHeight = 30.f;
     return _colorView;
 }
 
-- (MKCSReminderColorButton *)redColor {
+- (MKCUReminderColorButton *)redColor {
     if (!_redColor) {
-        _redColor = [[MKCSReminderColorButton alloc] init];
+        _redColor = [[MKCUReminderColorButton alloc] init];
         [_redColor addTarget:self
                       action:@selector(redColorButtonPressed)
             forControlEvents:UIControlEventTouchUpInside];
@@ -352,9 +352,9 @@ static CGFloat const textFieldHeight = 30.f;
     return _redColor;
 }
 
-- (MKCSReminderColorButton *)blueColor {
+- (MKCUReminderColorButton *)blueColor {
     if (!_blueColor) {
-        _blueColor = [[MKCSReminderColorButton alloc] init];
+        _blueColor = [[MKCUReminderColorButton alloc] init];
         _blueColor.colorLabel.text = @"Blue";
         [_blueColor addTarget:self
                        action:@selector(blueColorButtonPressed)
@@ -363,9 +363,9 @@ static CGFloat const textFieldHeight = 30.f;
     return _blueColor;
 }
 
-- (MKCSReminderColorButton *)greenColor {
+- (MKCUReminderColorButton *)greenColor {
     if (!_greenColor) {
-        _greenColor = [[MKCSReminderColorButton alloc] init];
+        _greenColor = [[MKCUReminderColorButton alloc] init];
         _greenColor.colorLabel.text = @"Green";
         [_greenColor addTarget:self
                         action:@selector(greenColorButtonPressed)

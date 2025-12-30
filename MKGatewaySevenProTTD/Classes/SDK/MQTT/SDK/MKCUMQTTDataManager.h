@@ -22,6 +22,8 @@ extern NSString *const MKCUReceiveDeviceOTAResultNotification;
 
 extern NSString *const MKCUReceiveDeviceNpcOTAResultNotification;
 
+extern NSString *const MKCUReceiveDeviceUpdateEapCertsResultNotification;
+
 extern NSString *const MKCUReceiveDeviceResetByButtonNotification;
 
 extern NSString *const MKCUReceiveDeviceUpdateMqttCertsResultNotification;
@@ -40,8 +42,38 @@ extern NSString *const MKCUReceiveBxpButtonDfuProgressNotification;
 
 extern NSString *const MKCUReceiveBxpButtonDfuResultNotification;
 
+extern NSString *const MKCUReceiveBxpDfuFailedNotification;
+
 
 extern NSString *const MKCUReceiveDeviceOfflineNotification;
+
+extern NSString *const MKCUReceiveBXPBtnAccDataNotification;
+
+extern NSString *const MKCUReceiveBXPBtnCRAccDataNotification;
+
+extern NSString *const MKCUReceiveBXPCRealTimeHTDataNotification;
+
+extern NSString *const MKCUReceiveBXPCAccDataNotification;
+
+extern NSString *const MKCUReceiveBXPBtnCRAlarmEventDataNotification;
+
+extern NSString *const MKCUReceiveBXPCHistoricalHTDataNotification;
+
+extern NSString *const MKCUReceiveBXPDAccDataNotification;
+
+extern NSString *const MKCUReceiveBXPTAccDataNotification;
+
+extern NSString *const MKCUReceiveBXPSRealTimeHTDataNotification;
+
+extern NSString *const MKCUReceiveBXPSAccDataNotification;
+
+extern NSString *const MKCUReceiveBXPSHistoricalHTDataNotification;
+
+extern NSString *const MKCUReceiveMKPirSensorDataNotification;
+
+extern NSString *const MKCUReceiveMKTofAccDataNotification;
+
+extern NSString *const MKCUReceiveMKTofDistanceDataNotification;
 
 @protocol MKCUReceiveDeviceDatasDelegate <NSObject>
 

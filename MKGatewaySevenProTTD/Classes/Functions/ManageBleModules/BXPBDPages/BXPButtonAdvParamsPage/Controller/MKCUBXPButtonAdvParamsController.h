@@ -1,16 +1,16 @@
 //
-//  MKCSBXPButtonAdvParamsController.h
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonAdvParamsController.h
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/1/21.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSBaseViewController.h"
+#import "MKCUBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKCSBXPButtonAdvParamsController : MKCSBaseViewController
+@interface MKCUBXPButtonAdvParamsController : MKCUBaseViewController
 
 @property (nonatomic, copy)NSString *bleMac;
 

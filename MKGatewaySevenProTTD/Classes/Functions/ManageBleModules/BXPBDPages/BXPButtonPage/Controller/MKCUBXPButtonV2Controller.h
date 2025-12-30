@@ -1,16 +1,16 @@
 //
-//  MKCSBXPButtonV2Controller.h
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonV2Controller.h
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2023/2/10.
 //  Copyright © 2023 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSBaseViewController.h"
+#import "MKCUBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKCSBXPButtonV2Controller : MKCSBaseViewController
+@interface MKCUBXPButtonV2Controller : MKCUBaseViewController
 
 @property (nonatomic, strong)NSDictionary *deviceBleInfo;
 

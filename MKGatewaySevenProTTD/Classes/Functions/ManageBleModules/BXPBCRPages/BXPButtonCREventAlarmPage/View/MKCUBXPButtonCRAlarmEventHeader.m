@@ -1,12 +1,12 @@
 //
-//  MKCSBXPButtonCRAlarmEventHeader.m
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonCRAlarmEventHeader.m
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/3/27.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSBXPButtonCRAlarmEventHeader.h"
+#import "MKCUBXPButtonCRAlarmEventHeader.h"
 
 #import "Masonry.h"
 
@@ -14,7 +14,7 @@
 
 #import "MKCustomUIAdopter.h"
 
-@interface MKCSBXPButtonCRAlarmEventHeader ()
+@interface MKCUBXPButtonCRAlarmEventHeader ()
 
 @property (nonatomic, strong)UIButton *syncButton;
 
@@ -32,7 +32,7 @@
 
 @end
 
-@implementation MKCSBXPButtonCRAlarmEventHeader
+@implementation MKCUBXPButtonCRAlarmEventHeader
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -98,24 +98,24 @@
 #pragma mark - event method
 
 - (void)syncButtonPressed {
-    if ([self.delegate respondsToSelector:@selector(cs_bxpButtonCRAlarmEventHeaderView_syncButtonPressed:)]) {
-        [self.delegate cs_bxpButtonCRAlarmEventHeaderView_syncButtonPressed:!self.syncButton.selected];
+    if ([self.delegate respondsToSelector:@selector(cu_bxpButtonCRAlarmEventHeaderView_syncButtonPressed:)]) {
+        [self.delegate cu_bxpButtonCRAlarmEventHeaderView_syncButtonPressed:!self.syncButton.selected];
     }
 }
 
 - (void)exportButtonPressed {
-    if ([self.delegate respondsToSelector:@selector(cs_bxpButtonCRAlarmEventHeaderView_exportButtonPressed)]) {
-        [self.delegate cs_bxpButtonCRAlarmEventHeaderView_exportButtonPressed];
+    if ([self.delegate respondsToSelector:@selector(cu_bxpButtonCRAlarmEventHeaderView_exportButtonPressed)]) {
+        [self.delegate cu_bxpButtonCRAlarmEventHeaderView_exportButtonPressed];
     }
 }
 
 #pragma mark - public method
 - (void)updateSyncStatus:(BOOL)isOn {
-    [self.synIcon.layer removeAnimationForKey:@"mk_cs_syncAnimation"];
+    [self.synIcon.layer removeAnimationForKey:@"mk_cu_syncAnimation"];
     self.syncButton.selected = isOn;
     if (isOn) {
         [self.synIcon.layer addAnimation:[MKCustomUIAdopter refreshAnimation:1.f]
-                                   forKey:@"mk_cs_syncAnimation"];
+                                   forKey:@"mk_cu_syncAnimation"];
         self.syncLabel.text = @"Stop";
     }else {
         self.syncLabel.text = @"Sync";
@@ -138,7 +138,7 @@
 - (UIImageView *)synIcon {
     if (!_synIcon) {
         _synIcon = [[UIImageView alloc] init];
-        _synIcon.image = LOADICON(@"MKGatewayMiniTwo", @"MKCSBXPButtonCRAlarmEventHeader", @"cs_threeAxisAcceLoadingIcon.png");
+        _synIcon.image = LOADICON(@"MKGatewaySevenProTTD", @"MKCUBXPButtonCRAlarmEventHeader", @"cu_threeAxisAcceLoadingIcon.png");
     }
     return _synIcon;
 }
@@ -157,7 +157,7 @@
 - (UIButton *)exportButton {
     if (!_exportButton) {
         _exportButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_exportButton setImage:LOADICON(@"MKGatewayMiniTwo", @"MKCSBXPButtonCRAlarmEventHeader", @"cs_slotExportEnableIcon.png") forState:UIControlStateNormal];
+        [_exportButton setImage:LOADICON(@"MKGatewaySevenProTTD", @"MKCUBXPButtonCRAlarmEventHeader", @"cu_slotExportEnableIcon.png") forState:UIControlStateNormal];
         [_exportButton addTarget:self
                           action:@selector(exportButtonPressed)
                 forControlEvents:UIControlEventTouchUpInside];

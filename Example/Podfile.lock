@@ -998,6 +998,7 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/DeviceDataPage/View
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionV2Page
     - MKGatewaySevenProTTD/Functions/ManageBleModules
     - MKGatewaySevenProTTD/Functions/SettingPages
     - MKGatewaySevenProTTD/LoginManager
@@ -1063,6 +1064,7 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/FilterPages/DataUploadIntervalPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/DuplicateDataFilterPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByAdvNamePage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage (= 0.1.0)
@@ -1072,6 +1074,7 @@ PODS:
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataV2Page (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTag (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTLMPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTofPage (= 0.1.0)
@@ -1079,6 +1082,37 @@ PODS:
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByURLPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionV2Page (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/FilterPages/DataUploadIntervalPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/FilterPages/DataUploadIntervalPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/FilterPages/DataUploadIntervalPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/FilterPages/DataUploadIntervalPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/FilterPages/DataUploadIntervalPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/FilterPages/DataUploadIntervalPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
@@ -1374,6 +1408,45 @@ PODS:
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataV2Page (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataV2Page/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataV2Page/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataV2Page/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByBeaconPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByButtonPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByOtherPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByPirPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataV2Page/Model
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTag
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTLMPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTofPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByUIDPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByURLPage
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataV2Page/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
   - MKGatewaySevenProTTD/Functions/FilterPages/FilterByTag (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
@@ -1562,7 +1635,6 @@ PODS:
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/Controller (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/Model (= 0.1.0)
-    - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/View (= 0.1.0)
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
@@ -1578,7 +1650,6 @@ PODS:
     - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataPage
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage
     - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/Model
-    - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/View
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
@@ -1591,7 +1662,34 @@ PODS:
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
-  - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionPage/View (0.1.0):
+  - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionV2Page (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionV2Page/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionV2Page/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionV2Page/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/FilterPages/DataUploadIntervalPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/DuplicateDataFilterPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByAdvNamePage
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByMacPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/FilterByRawDataV2Page
+    - MKGatewaySevenProTTD/Functions/FilterPages/UploadDataOptionPage
+    - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionV2Page/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/FilterPages/UploadOptionV2Page/Model (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
     - MKGatewaySevenProTTD/CTMediator
@@ -1607,9 +1705,16 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage (= 0.1.0)
-    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ManageBleModules/ManageBleDevicesPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/ManageBleModules/NormalConnectedPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages (= 0.1.0)
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
@@ -1643,29 +1748,976 @@ PODS:
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
-  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage (0.1.0):
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
-    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage/Controller (= 0.1.0)
-    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAccDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAdvParamsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRRemoteReminderPage (= 0.1.0)
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
-  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage/Controller (0.1.0):
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAccDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAccDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAccDataPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAccDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAccDataPage/View
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAccDataPage/View (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAdvParamsPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAdvParamsPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAdvParamsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAdvParamsPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAdvParamsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAdvParamsPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/Model
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/View
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage/View (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRPage/Controller (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage
-    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage/View
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAccDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRAdvParamsPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCREventAlarmPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRRemoteReminderPage
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
-  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage/View (0.1.0):
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRRemoteReminderPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRRemoteReminderPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRRemoteReminderPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRRemoteReminderPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRRemoteReminderPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRRemoteReminderPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAccDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAdvParamsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonRemoteReminderPage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAccDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAccDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAccDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAdvParamsPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAdvParamsPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAdvParamsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAdvParamsPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAdvParamsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAdvParamsPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAccDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonAdvParamsPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonPage/View
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonRemoteReminderPage
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonPage/View (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonRemoteReminderPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonRemoteReminderPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonRemoteReminderPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonRemoteReminderPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonRemoteReminderPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonRemoteReminderPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAccDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAdvParamsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCHistoricalTHDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCRealTimeTHDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCTHDataSampleRatePage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAccDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAccDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAccDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAdvParamsPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAdvParamsPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAdvParamsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAdvParamsPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAdvParamsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAdvParamsPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCHistoricalTHDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCHistoricalTHDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCHistoricalTHDataPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCHistoricalTHDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCHistoricalTHDataPage/View
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCHistoricalTHDataPage/View (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAccDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCAdvParamsPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCHistoricalTHDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCRealTimeTHDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCTHDataSampleRatePage
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCRealTimeTHDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCRealTimeTHDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCRealTimeTHDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCTHDataSampleRatePage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCTHDataSampleRatePage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCTHDataSampleRatePage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCTHDataSampleRatePage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCTHDataSampleRatePage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCTHDataSampleRatePage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccParamsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAdvParamsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDPage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccParamsPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccParamsPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccParamsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccParamsPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccParamsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccParamsPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAdvParamsPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAdvParamsPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAdvParamsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAdvParamsPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAdvParamsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAdvParamsPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAccParamsPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDAdvParamsPage
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAccDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHallCountPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHistoricalTHDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRealTimeTHDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRemoteReminderPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSTHDataSampleRatePage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAccDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAccDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAccDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/Model
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/View
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage/View (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHallCountPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHallCountPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHallCountPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHistoricalTHDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHistoricalTHDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHistoricalTHDataPage/View (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHistoricalTHDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHistoricalTHDataPage/View
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHistoricalTHDataPage/View (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAccDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSAdvParamsPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHallCountPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSHistoricalTHDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRealTimeTHDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRemoteReminderPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSTHDataSampleRatePage
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRealTimeTHDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRealTimeTHDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRealTimeTHDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRemoteReminderPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRemoteReminderPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRemoteReminderPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRemoteReminderPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRemoteReminderPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSRemoteReminderPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSTHDataSampleRatePage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSTHDataSampleRatePage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSTHDataSampleRatePage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSTHDataSampleRatePage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSTHDataSampleRatePage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSTHDataSampleRatePage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccParamsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAdvParamsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTMotionEventPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTRemoteReminderPage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccParamsPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccParamsPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccParamsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccParamsPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccParamsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccParamsPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAdvParamsPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAdvParamsPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAdvParamsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAdvParamsPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAdvParamsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAdvParamsPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTMotionEventPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTMotionEventPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTMotionEventPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAccParamsPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTAdvParamsPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTMotionEventPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTRemoteReminderPage
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTRemoteReminderPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTRemoteReminderPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTRemoteReminderPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTRemoteReminderPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTRemoteReminderPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTRemoteReminderPage/Model (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
     - MKGatewaySevenProTTD/CTMediator
@@ -1691,13 +2743,156 @@ PODS:
     - MKGatewaySevenProTTD/CTMediator
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
-    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPButtonPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBCRPages/BXPButtonCRPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPBDPages/BXPButtonPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPCPages/BXPCPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPDPages/BXPDPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPSPages/BXPSPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/BXPTPages/BXPTPage
     - MKGatewaySevenProTTD/Functions/ManageBleModules/ManageBleDevicesPage/View
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages
     - MKGatewaySevenProTTD/Functions/ManageBleModules/NormalConnectedPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages
     - MKGatewaySevenProTTD/LoginManager
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/ManageBleDevicesPage/View (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAccDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAdvParamsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorParamsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAccDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAccDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAccDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAdvParamsPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAdvParamsPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAdvParamsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAdvParamsPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAdvParamsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAdvParamsPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAccDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofAdvParamsPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorParamsPage
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorParamsPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorParamsPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorParamsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorParamsPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorParamsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/MKTofPages/TofSensorParamsPage/Model (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
     - MKGatewaySevenProTTD/CTMediator
@@ -1728,6 +2923,121 @@ PODS:
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/ManageBleModules/NormalConnectedPage/View (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirAdvParamsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorDataPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorParamsPage (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirAdvParamsPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirAdvParamsPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirAdvParamsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirAdvParamsPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirAdvParamsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirAdvParamsPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/ButtonDFUPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirAdvParamsPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorDataPage
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorParamsPage
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorDataPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorDataPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorDataPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorParamsPage (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorParamsPage/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorParamsPage/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorParamsPage/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorParamsPage/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/ManageBleModules/PirPages/PirSensorParamsPage/Model (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
     - MKGatewaySevenProTTD/CTMediator
@@ -1986,6 +3296,7 @@ PODS:
     - MKGatewaySevenProTTD/DeviceModel
     - MKGatewaySevenProTTD/Expand
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconPage (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconV2Page (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/CommunicatePage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/DataReportPage (= 0.1.0)
     - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/IndicatorSettingsPage (= 0.1.0)
@@ -2019,6 +3330,36 @@ PODS:
     - MKGatewaySevenProTTD/SDK
     - MLInputDodger
   - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconPage/Model (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconV2Page (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconV2Page/Controller (= 0.1.0)
+    - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconV2Page/Model (= 0.1.0)
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconV2Page/Controller (0.1.0):
+    - MKBaseModuleLibrary
+    - MKCustomUIModule
+    - MKGatewaySevenProTTD/CTMediator
+    - MKGatewaySevenProTTD/DeviceModel
+    - MKGatewaySevenProTTD/Expand
+    - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconV2Page/Model
+    - MKGatewaySevenProTTD/LoginManager
+    - MKGatewaySevenProTTD/SDK
+    - MLInputDodger
+  - MKGatewaySevenProTTD/Functions/SettingPages/NormalSettings/AdvBeaconV2Page/Model (0.1.0):
     - MKBaseModuleLibrary
     - MKCustomUIModule
     - MKGatewaySevenProTTD/CTMediator
@@ -2446,7 +3787,7 @@ SPEC CHECKSUMS:
   MKBaseModuleLibrary: 2b79bcae588c755588413fbb643b510253271b23
   MKBaseMQTTModule: 6a934ccf507e0eb807ef8f8a74dacd5d60216834
   MKCustomUIModule: 8426eba1d3178b06d92741d31da32502920fb8fa
-  MKGatewaySevenProTTD: 3df4f5edf4240a2a57660ae3adf2baef234cafbe
+  MKGatewaySevenProTTD: 769692549fe726505e0f921738a447953e0504b6
   MKIotCloudManager: 241bd4bb7fae48e6b031c69a40c26637aabe67be
   MLInputDodger: 79a0e420a80d0d3bba122bf2639603cc76609ba8
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef

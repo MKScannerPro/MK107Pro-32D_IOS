@@ -1,12 +1,12 @@
 //
-//  MKCSBXPButtonCRAlarmEventController.m
-//  MKGatewayMiniTwo_Example
+//  MKCUBXPButtonCRAlarmEventController.m
+//  MKGatewaySevenProTTD_Example
 //
 //  Created by aa on 2025/3/27.
 //  Copyright © 2025 aadyx2007@163.com. All rights reserved.
 //
 
-#import "MKCSBXPButtonCRAlarmEventController.h"
+#import "MKCUBXPButtonCRAlarmEventController.h"
 
 #import <MessageUI/MessageUI.h>
 #import <sys/utsname.h>
@@ -28,33 +28,33 @@
 
 #import "MKBLEBaseSDKAdopter.h"
 
-#import "MKCSMQTTDataManager.h"
-#import "MKCSMQTTInterface.h"
+#import "MKCUMQTTDataManager.h"
+#import "MKCUMQTTInterface.h"
 
-#import "MKCSDeviceModeManager.h"
-#import "MKCSDeviceModel.h"
+#import "MKCUDeviceModeManager.h"
+#import "MKCUDeviceModel.h"
 
-#import "MKCSBXPButtonCRAlarmEventHeader.h"
+#import "MKCUBXPButtonCRAlarmEventHeader.h"
 
-#import "MKCSBXPButtonCRAlarmEventModel.h"
+#import "MKCUBXPButtonCRAlarmEventModel.h"
 
-@interface MKCSBXPButtonCRAlarmEventController ()<MFMailComposeViewControllerDelegate,
-MKCSBXPButtonCRAlarmEventHeaderDelegate>
+@interface MKCUBXPButtonCRAlarmEventController ()<MFMailComposeViewControllerDelegate,
+MKCUBXPButtonCRAlarmEventHeaderDelegate>
 
-@property (nonatomic, strong)MKCSBXPButtonCRAlarmEventHeader *headerView;
+@property (nonatomic, strong)MKCUBXPButtonCRAlarmEventHeader *headerView;
 
 @property (nonatomic, strong)UITextView *textView;
 
 @property (nonatomic, strong)NSDateFormatter *dateFormatter;
 
-@property (nonatomic, strong)MKCSBXPButtonCRAlarmEventModel *dataModel;
+@property (nonatomic, strong)MKCUBXPButtonCRAlarmEventModel *dataModel;
 
 @end
 
-@implementation MKCSBXPButtonCRAlarmEventController
+@implementation MKCUBXPButtonCRAlarmEventController
 
 - (void)dealloc {
-    NSLog(@"MKCSBXPButtonCRAlarmEventController销毁");
+    NSLog(@"MKCUBXPButtonCRAlarmEventController销毁");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -81,8 +81,8 @@ MKCSBXPButtonCRAlarmEventHeaderDelegate>
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - MKCSBXPButtonCRAlarmEventHeaderDelegate
-- (void)cs_bxpButtonCRAlarmEventHeaderView_syncButtonPressed:(BOOL)isOn {
+#pragma mark - MKCUBXPButtonCRAlarmEventHeaderDelegate
+- (void)cu_bxpButtonCRAlarmEventHeaderView_syncButtonPressed:(BOOL)isOn {
     [[MKHudManager share] showHUDWithTitle:@"Config..." inView:self.view isPenetration:NO];
     [self.dataModel notifyDataWithBleMac:self.bleMac notify:isOn sucBlock:^{
         [[MKHudManager share] hide];
@@ -91,7 +91,7 @@ MKCSBXPButtonCRAlarmEventHeaderDelegate>
         if (isOn) {
             [[NSNotificationCenter defaultCenter] addObserver:self
                                                      selector:@selector(receiveAlarmDatas:)
-                                                         name:MKCSReceiveBXPBtnCRAlarmEventDataNotification
+                                                         name:MKCUReceiveBXPBtnCRAlarmEventDataNotification
                                                        object:nil];
         }else {
             [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -102,7 +102,7 @@ MKCSBXPButtonCRAlarmEventHeaderDelegate>
     }];
 }
 
-- (void)cs_bxpButtonCRAlarmEventHeaderView_exportButtonPressed {
+- (void)cu_bxpButtonCRAlarmEventHeaderView_exportButtonPressed {
     if (![MFMailComposeViewController canSendMail]) {
         //如果是未绑定有效的邮箱，则跳转到系统自带的邮箱去处理
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"MESSAGE://"]
@@ -137,7 +137,7 @@ MKCSBXPButtonCRAlarmEventHeaderDelegate>
 #pragma mark - Notes
 - (void)receiveAlarmDatas:(NSNotification *)note {
     NSDictionary *user = note.userInfo;
-    if (!ValidDict(user) || !ValidStr(user[@"device_info"][@"mac"]) || ![[MKCSDeviceModeManager shared].macAddress isEqualToString:user[@"device_info"][@"mac"]]) {
+    if (!ValidDict(user) || !ValidStr(user[@"device_info"][@"mac"]) || ![[MKCUDeviceModeManager shared].macAddress isEqualToString:user[@"device_info"][@"mac"]]) {
         return;
     }
     NSDictionary *dataDic = user[@"data"];
@@ -179,9 +179,9 @@ MKCSBXPButtonCRAlarmEventHeaderDelegate>
 }
 
 #pragma mark - getter
-- (MKCSBXPButtonCRAlarmEventHeader *)headerView {
+- (MKCUBXPButtonCRAlarmEventHeader *)headerView {
     if (!_headerView) {
-        _headerView = [[MKCSBXPButtonCRAlarmEventHeader alloc] init];
+        _headerView = [[MKCUBXPButtonCRAlarmEventHeader alloc] init];
         _headerView.delegate = self;
     }
     return _headerView;
@@ -206,9 +206,9 @@ MKCSBXPButtonCRAlarmEventHeaderDelegate>
     return _dateFormatter;
 }
 
-- (MKCSBXPButtonCRAlarmEventModel *)dataModel {
+- (MKCUBXPButtonCRAlarmEventModel *)dataModel {
     if (!_dataModel) {
-        _dataModel = [[MKCSBXPButtonCRAlarmEventModel alloc] init];
+        _dataModel = [[MKCUBXPButtonCRAlarmEventModel alloc] init];
     }
     return _dataModel;
 }
